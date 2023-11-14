@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+Template Name: Marvin - Responsive Bootstrap 4 Admin Dashboard Template
+Author: Hencework
+Contact: https://hencework.ticksy.com/
+
+License: You must have a valid license purchased only from templatemonster to legally use the template for your project.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SHJSEEN</title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Bootstrap table CSS -->
+    <link href="{% static 'vendors/bootstrap-table/dist/bootstrap-table.min.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Data Table CSS -->
+    <link href="{% static 'vendors/datatables.net-dt/css/jquery.dataTables.min.css'  %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+    <!-- for daterange picker -->
+    <link rel="stylesheet" href="{% static 'css/vanilla-datetimerange-picker.css'  %}" />
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="{% static 'js/vanilla-datetimerange-picker.js' %}"></script>
+  
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+</head>
+
+<body>
+
+
+   <!-- HK Wrapper -->
+    <div class="hk-wrapper hk-vertical-nav">
+
+        <!-- Top Navbar -->
+        {% include 'common/top_nav_bar.html' %}
+        <!-- /Top Navbar -->
+
+        <!-- Vertical Nav -->
+        {% include 'common/vertical_nav_bar.html' %}
+        <!-- /Vertical Nav -->
+
+        <!-- Main Content -->
+        {% block main_content %}
+        {% endblock %}
+        <!-- /Main Content -->
+
+    </div>
+    <!-- HK Wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendors/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
+
+    <!-- FeatherIcons JavaScript -->
+    <script src="{% static 'js/feather.min.js' %}"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="{% static 'js/dropdown-bootstrap-extended.js' %}"></script>
+
+    <!-- Bootstrap-table JavaScript -->
+    <script src="{% static 'vendors/bootstrap-table/dist/bootstrap-table.min.js' %}"></script>
+
+    <!-- Peity JavaScript -->
+    <script src="{% static 'vendors/peity/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'js/peity-data.js' %}"></script>
+
+    <!-- Toggles JavaScript -->
+    <script src="{% static 'vendors/jquery-toggles/toggles.min.js' %}"></script>
+    <script src="{% static 'js/toggle-data.js' %}"></script>
+
+    <!-- Init JavaScript -->
+    <script src="{% static 'js/init.js' %}"></script>
+
+    <!-- calendar icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+
+</html>

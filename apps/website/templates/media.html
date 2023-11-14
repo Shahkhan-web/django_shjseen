@@ -1,0 +1,905 @@
+{% load static%}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="author" content="Shjseen">
+    <meta name="description" content="">
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="icon" href="/staticfiles/assets/images/favicon.ico" type="image/ico">
+
+    <!-- Core Style -->
+    <link rel="stylesheet" href="/staticfiles/style.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="/staticfiles/css/font-icons.css">
+
+    <!-- Niche Demos -->
+    <link rel="stylesheet" href="/staticfiles/demos/conference/conference.css">
+
+
+    <!-- Plugins/Components CSS -->
+    <link rel="stylesheet" href="/staticfiles/css/swiper.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/staticfiles/css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Document Title
+	============================================= -->
+    <title>Shjseen</title>
+
+</head>
+
+<body class="stretched">
+
+    <style>
+        .logo-new {
+            background: white;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: #ebebeb !important;
+        }
+
+        .button {
+            color: #332;
+            border-radius: 20px;
+        }
+
+        .button:hover {
+            color: #fff !important;
+            border-radius: 20px;
+        }
+
+
+        :root {
+            /* Colors */
+            --brand-color: hsl(46, 100%, 50%);
+            --black: hsl(0, 0%, 0%);
+            --white: hsl(0, 0%, 100%);
+            /* Fonts */
+            --font-title: "Montserrat", sans-serif;
+            --font-text: "Lato", sans-serif;
+        }
+
+        /* RESET */
+
+        /* Box sizing rules */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Remove default margin */
+        body,
+        h2,
+        p {
+            margin: 0;
+        }
+
+        /* GLOBAL STYLES */
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-family: var(--font-title);
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        p {
+            font-family: var(--font-text);
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--white);
+        }
+
+        .flow>*+* {
+            margin-top: var(--flow-space, 1em);
+        }
+
+        /* CARD COMPONENT */
+
+        .card {
+            display: grid;
+            place-items: center;
+            /* height: 28.125rem; */
+            overflow: hidden;
+            border-radius: 0.625rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+            height: 20rem;
+            width: 16rem;
+            margin-bottom: 2rem;
+        }
+
+        .pending-tm {
+            padding: 1rem;
+            color: #000;
+        }
+
+        .card>* {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .button-pr {
+            color: #444 !important;
+            border-radius: 20px;
+            transition: .5s ease-in-out all;
+            background-color: #fae45e !important;
+            border: 2px solid #fae45e;
+        }
+
+        .button-pr:hover {
+            color: #fff !important;
+            border-radius: 20px;
+            background-color: #444 !important;
+            border: 2px solid #444;
+        }
+
+        .card__background {
+            object-fit: cover;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        .card__content {
+            --flow-space: 0.9375rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-self: flex-end;
+            height: 91%;
+            padding: 12% 1.25rem 1.875rem;
+            background: linear-gradient(180deg,
+                    hsla(0, 0%, 0%, 0) 0%,
+                    hsla(0, 0%, 0%, 0.3) 10%,
+                    hsl(0, 0%, 0%) 100%);
+        }
+
+        .card__content--container {
+            --flow-space: 1.25rem;
+        }
+
+        .h-text-white:hover {
+            color: #fff !important;
+        }
+
+        .b-r {
+            border-radius: 20px !important;
+        }
+
+        .button-them {
+            background-color: #fae45e !important;
+        }
+
+        .card__title {
+            position: relative;
+            width: fit-content;
+            width: -moz-fit-content;
+            color: white;
+            /* Prefijo necesario para Firefox  */
+        }
+
+        .card__title::after {
+            content: "";
+            position: absolute;
+            height: 0.3125rem;
+            width: calc(100% + 1.25rem);
+            bottom: calc((1.25rem - 0.5rem) * -1);
+            left: -1.25rem;
+            background-color: var(--brand-color);
+        }
+
+        .card__button {
+            padding: 0.75em 1.6em;
+            width: fit-content;
+            width: -moz-fit-content;
+            /* Prefijo necesario para Firefox  */
+            font-variant: small-caps;
+            font-weight: bold;
+            border-radius: 0.45em;
+            border: none;
+            background-color: var(--brand-color);
+            font-family: var(--font-title);
+            font-size: 1.125rem;
+            color: var(--black);
+        }
+
+        .card__button:focus {
+            outline: 2px solid black;
+            outline-offset: -5px;
+        }
+
+        @media (any-hover: hover) and (any-pointer: fine) {
+            .card__content {
+                transform: translateY(62%);
+                transition: transform 500ms ease-out;
+                transition-delay: 500ms;
+            }
+
+            .card__title::after {
+                opacity: 0;
+                transform: scaleX(0);
+                transition: opacity 1000ms ease-in, transform 500ms ease-out;
+                transition-delay: 500ms;
+                transform-origin: right;
+            }
+
+            .card__background {
+                transition: transform 500ms ease-in;
+            }
+
+            .card__content--container> :not(.card__title),
+            .card__button {
+                opacity: 0;
+                transition: transform 500ms ease-out, opacity 500ms ease-out;
+            }
+
+            .card:hover,
+            .card:focus-within {
+                transform: scale(1.05);
+                transition: transform 500ms ease-in;
+            }
+
+            .card:hover .card__content,
+            .card:focus-within .card__content {
+                transform: translateY(0);
+                transition: transform 500ms ease-in;
+            }
+
+            .card:focus-within .card__content {
+                transition-duration: 0ms;
+            }
+
+            .card:hover .card__background,
+            .card:focus-within .card__background {
+                transform: scale(1.3);
+            }
+
+            .card:hover .card__content--container> :not(.card__title),
+            .card:hover .card__button,
+            .card:focus-within .card__content--container> :not(.card__title),
+            .card:focus-within .card__button {
+                opacity: 1;
+                transition: opacity 500ms ease-in;
+                transition-delay: 1000ms;
+            }
+
+            .card:hover .card__title::after,
+            .card:focus-within .card__title::after {
+                opacity: 1;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: opacity 500ms ease-in, transform 500ms ease-in;
+                transition-delay: 500ms;
+            }
+        }
+
+        .section-1 {
+            background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(/staticfiles/assets/images/call-to-action-bg.jpg) fixed center center;
+            background-size: cover;
+            padding: 60px 0;
+            height: 300px;
+        }
+
+        .section-2 {
+            background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('/staticfiles/assets/images/contact_b.jpeg') fixed center center;
+            background-size: cover;
+            padding: 60px 0;
+            height: 300px;
+        }
+
+        .header-chir {
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+
+        .team-desc {
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            width: 100%;
+            text-align: center !important;
+            transition: transform .2s ease-out;
+            z-index: 1 !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        .menu-link {
+            color: #000 !important;
+        }
+
+        .text-caro {
+            font-size: 27px;
+        }
+
+        .text-caro-1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .copyright-links:hover a {
+            color: #fae45e !important;
+        }
+
+        .slider-uper {
+            margin: 0rem;
+            position: relative;
+            bottom: 6em !important;
+        }
+
+        @media only screen and (max-width: 720px) {
+            .last-add {
+                font-size: 20px;
+            }
+
+            .last-add-2 {
+                font-size: 15px;
+            }
+
+            .logo-new {
+                height: 50px !important;
+            }
+
+            .menu-link {
+                color: white !important;
+            }
+
+            .section-reg-text {
+                font-size: 20px !important;
+                position: relative;
+                bottom: 1rem;
+            }
+
+            .bordof-chir {
+                font-size: 28px !important;
+                padding-bottom: 1rem;
+            }
+
+            .foot-icon {
+                padding-bottom: 1rem !important;
+            }
+
+            .bord-all {
+                position: relative;
+                left: 4rem !important;
+                top: 1rem !important;
+            }
+
+            .regi-card {
+                margin: 10% !important;
+            }
+        }
+
+        .section-reg-text {
+            font-size: 2.5rem;
+        }
+
+        .h-text-color:hover {
+            color: #fff !important;
+        }
+
+
+        .banner-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/media_b.jpeg') fixed bottom;
+            background-size: cover;
+            padding: 20vh 0;
+            height: 500px;
+            position: relative;
+            top: -20vh;
+            bottom: 3rem;
+        }
+    </style>
+
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper">
+
+        <!-- Header
+		============================================= -->
+        <header id="header" class="transparent-header floating-header">
+            <div id="header-wrap">
+                <div class="container b-r ">
+                    <div class="header-row justify-content-lg-between">
+
+                        <!-- Logo
+						============================================= -->
+                        <div id="logo" class="me-lg-0">
+                            <a href="{% url 'landing_page' %}">
+                                <img class="logo-default" src="/staticfiles/assets/images/logos/logo.png"
+                                    style="height: 60px !important;" alt="Sjseen Logo">
+                                <img class="logo-dark"
+                                    srcset="/staticfiles/demos/conference/images/logo-dark.png, /staticfiles/assets/images/logos/logo.png 2x"
+                                    src="/staticfiles/assets/images/logos/logo.png" alt="Sjseen Logo">
+                            </a>
+                        </div><!-- #logo end -->
+
+                        <div class="primary-menu-trigger">
+                            <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                            </button>
+                        </div>
+
+                        <!-- Primary Navigation
+						============================================= -->
+                        <nav class="primary-menu">
+
+                            <ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250"
+                                data-offset="160">
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="aboutUs">
+                                        <div>About Us</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}">
+                                        <div>Award Category</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'media' %}"">
+										<div>Media</div>
+									</a>
+								</li>
+								<li class=" menu-item"><a class="menu-link ls-1 text-uppercase" href="contact">
+                                            <div>Contact Us</div>
+                                        </a>
+                                </li>
+                            </ul>
+
+                        </nav><!-- #primary-menu end -->
+
+                        <!-- Primary Navigation
+						============================================= -->
+                        <nav class="primary-menu">
+
+                            <ul class="menu-container header-button">
+                                <li class="menu-item">
+                                    <a href="#section-tickets"
+                                        class="button ls-1 text-uppercase fw-semibold button-pr m-0"
+                                        data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
+                                </li>
+                            </ul>
+
+                        </nav><!-- #primary-menu end -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrap-clone"></div>
+        </header><!-- #header end -->
+        <div class="row" style="background-color: #ebebeb !important;">
+            <div class="banner-section">
+                <div style="text-align: center; margin: 6%;">
+                    <h2>Gallery - Masonry</h2>
+                    <span style="color: #fff;">Showcase of Our Awesome Works</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content
+		============================================= -->
+
+        <section class="container-fluid" style="width: auto !important; margin-bottom: 5vh !important;">
+            <div class="container-fluid" style="width: auto !important; margin: 0px 5vw;margin-top: -5vh;">
+
+                <div class="grid-filter-wrap">
+
+                    <!-- Portfolio Filter
+						============================================= -->
+                    <ul class="grid-filter" data-container="#portfolio">
+                        <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
+                        <li><a href="#" data-filter=".pf-1">category 1</a></li>
+                        <li><a href="#" data-filter=".pf-2">category 2</a></li>
+                    </ul>
+                    <!-- .grid-filter end -->
+
+                    <div class="grid-shuffle rounded" data-container="#portfolio">
+                        <i class="uil uil-sync"></i>
+                    </div>
+
+                </div>
+
+                <!-- Portfolio Items
+					============================================= -->
+                <div id="portfolio" class="portfolio portfolio-reveal row grid-container gutter-20"
+                    data-layout="fitRows">
+
+                    <!-- Portfolio Item: Start -->
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-media pf-1">
+                        <!-- Grid Inner: Start -->
+                        <div class="grid-inner">
+                            <!-- Image: Start -->
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/1.jpg" alt="Open Imagination">
+                                </a>
+                                <!-- Overlay: Start -->
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/1.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                                <!-- Overlay: End -->
+                            </div>
+                            <!-- Image: End -->
+
+                            <!-- Description: Start -->
+                        </div>
+                        <!-- Grid Inner: End -->
+                    </article>
+                    <!-- Portfolio Item: End -->
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-1 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/2.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/2.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-1 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/3.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/3.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-1 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/4.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/4.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-1 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/5.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/5.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-2 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/6.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/6.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-2 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/7.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/7.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-2 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/8.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/8.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12 pf-2 ">
+                        <div class="grid-inner">
+                            <div class="portfolio-image">
+                                <a>
+                                    <img src="/staticfiles/assets/media/9.jpg" alt="meida">
+                                </a>
+                                <div class="bg-overlay">
+                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item">
+                                        <a href="/staticfiles/assets/media/9.jpg"
+                                            class="overlay-trigger-icon bg-light text-dark"
+                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
+                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
+                                    </div>
+                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                        data-hover-parent=".portfolio-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+
+                </div><!-- #portfolio end -->
+
+            </div>
+        </section>
+        <!-- Footer
+		============================================= -->
+        <footer id="footer" class="dark bg-dark">
+            <div class="container">
+
+                <!-- Footer Widgets
+				============================================= -->
+                <div class="footer-widgets-wrap py-0">
+                    <div class="row align-items-center justify-content-center g-4 mb-5 mb-lg-0">
+                        <div class="col-12">
+                            <div class="grid-inner px-4 py-6 text-center mx-auto" style="max-width: 54rem;">
+                                <h3 class="display-5 mt-3 mb-5" style="font-size: xx-large;">
+                                    Have you made any great achievements in your business?
+                                    <br>
+                                    We are always here to support.
+                                </h3>
+                                <a href="participate" class="button button-pr button-xlarge  mx-0">Register Now</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 text-lg-start" data-class="down-lg:order-1">
+                            <a href="{% url 'landing_page' %}">
+                                <img srcset="/staticfiles/assets/images/logos/logo_white.png"
+                                    src="/staticfiles/assets/images/logos/logo_white.png" alt="Shjseen Logo Footer"
+                                    style="width: 70% !important;margin-bottom: 20px;">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
+                            <div class="d-inline-flex gap-5">
+                                <a href="aboutUs">About</a>
+                                <a href="{% url 'media' %}">media</a>
+                                <a href="{% url 'award' %}">Award Category</a>
+                                <a href="contact">Contact Us</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 text-lg-end" data-class="down-lg:order-3">
+                            <div class="d-inline-flex justify-content-center">
+                                <a href="https://www.facebook.com/shjSEEN" style="visibility: hidden;"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                    title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.facebook.com/shjSEEN"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                    title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="https://twitter.com/shjSEEN"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-twitter"
+                                    title="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/shjseen"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-instagram"
+                                    title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/company/shjseen/"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-linkedin"
+                                    title="Twitter">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCNijiN0k7q3rjPyuaffUIug"
+                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-youtube"
+                                    title="Twitter">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .footer-widgets-wrap end -->
+
+                <!-- Copyrights
+				============================================= -->
+                <div id="copyrights" class="bg-transparent border-top border-default">
+                    <div class="row g-3">
+                        <div class="col-lg-6  text-lg-start">
+                            Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+                        </div>
+
+                        <div class="col-lg-6 text-lg-end">
+                            <div class="copyright-links mt-0">
+                                <a href="{% url 'terms' %}">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #copyrights end -->
+
+            </div>
+        </footer><!-- #footer end -->
+
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+	============================================= -->
+    <div id="gotoTop" class="uil uil-angle-up"></div>
+
+    <!-- JavaScripts
+	============================================= -->
+    <script src="/staticfiles/js/plugins.min.js"></script>
+    <script src="/staticfiles/js/functions.bundle.js"></script>
+
+    <!-- Parallax Script
+	============================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+
+    <script>
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+        jQuery(document).ready(function () {
+            // Ticket Price Changed Script
+            var elementEarlyBird = jQuery("#early-bird-person"),
+                element1Day = jQuery("#1-day-pricing-person"),
+                element2Day = jQuery("#2-day-pricing-person"),
+                elementFull = jQuery("#full-pricing-person");
+
+            elementEarlyBird.on('change', function () {
+                pricingEarlyBird = jQuery(this).prop('value');
+                jQuery('.early-bird-pricing').html('$' + (pricingEarlyBird * 39));
+            });
+
+            element1Day.on('change', function () {
+                pricing1day = jQuery(this).prop('value');
+                jQuery('.1-day-pricing').html('$' + (pricing1day * 29));
+            });
+
+            element2Day.on('change', function () {
+                pricing2Day = jQuery(this).prop('value');
+                jQuery('.2-day-pricing').html('$' + (pricing2Day * 49));
+            });
+
+            elementFull.on('change', function () {
+                pricingFull = jQuery(this).prop('value');
+                jQuery('.full-pricing').html('$' + (pricingFull * 69));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

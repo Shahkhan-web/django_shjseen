@@ -1,0 +1,1148 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="author" content="Shjseen">
+    <meta name="description" content="">
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence." name="description">
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence." property="og:title">
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence."
+        property="og:description">
+
+
+    <meta content="https://www.sharjah.gov.ae/" itemprop="image" property="og:image">
+    <meta content="https://www.sharjah.gov.ae/" property="og:url">
+
+    <meta content="https://www.sharjah.gov.ae/" itemprop="image" property="og:image">
+    <meta content="https://www.sharjah.gov.ae/" property="og:url">
+
+    <meta name="twitter:title" content="Sharjah Excellence Award, The biggest award for achievement and excellence.">
+    <meta name="twitter:description"
+        content="Sharjah Excellence Award, The biggest award for achievement and excellence.">
+    <meta name="twitter:image" content="https://www.sharjah.gov.ae">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta content="summary" name="twitter:card">
+
+    <link href="/staticfiles/assets/images/favicon.ico'" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/staticfiles/assets/images/favicon.ico" />
+    <link rel="shortcut icon" href="/staticfiles/assets/images/favicon.ico" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="author" content="Shjseen">
+    <meta name="description" content="">
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Core Style -->
+    <link rel="stylesheet" href="/staticfiles/style.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="/staticfiles/css/font-icons.css">
+
+    <!-- Niche Demos -->
+    <link rel="stylesheet" href="/staticfiles/demos/conference/conference.css">
+
+    <!-- Plugins/Components CSS -->
+    <link rel="stylesheet" href="/staticfiles/css/swiper.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/staticfiles/css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Document Title
+	============================================= -->
+    <title>Shjseen</title>
+
+</head>
+
+<body class="stretched">
+
+    <style>
+        #call-to-action {
+            background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('/staticfiles/assets/images/call-to-action-bg.jpg') fixed center center;
+            background-size: auto, auto;
+            background-size: cover;
+            padding: 60px 0;
+        }
+
+        #call-to-action .cta-btn:hover {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        #call-to-action .cta-btn {
+            font-family: 'sanchez', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            background: #fff;
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 5px;
+            transition: 0.5s;
+            margin-top: 45px;
+            color: #000;
+            border: 2px solid transparent;
+        }
+
+        .logo-new {
+            background: white;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .button-them {
+            background-color: #fae45e !important;
+        }
+
+        :root {
+            /* Colors */
+            --brand-color: hsl(46, 100%, 50%);
+            --black: hsl(0, 0%, 0%);
+            --white: hsl(0, 0%, 100%);
+            /* Fonts */
+            --font-title: "Montserrat", sans-serif;
+            --font-text: "Lato", sans-serif;
+        }
+
+        /* RESET */
+
+        /* Box sizing rules */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Remove default margin */
+        body,
+        h2,
+        p {
+            margin: 0;
+        }
+
+        /* GLOBAL STYLES */
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-family: var(--font-title);
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        p {
+            font-family: var(--font-text);
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--white);
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 8px;
+            width: 99%;
+            height: 99%;
+            background: -webkit-linear-gradient(280deg, var(--cnvs-color1) 12.08%, var(--cnvs-color2) 53.53%, var(--cnvs-color3) 95.62%);
+            background: -o-linear-gradient(280deg, var(--cnvs-color1) 12.08%, var(--cnvs-color2) 53.53%, var(--cnvs-color3) 95.62%);
+            background: linear-gradient(280deg, var(--cnvs-color1) 12.08%, var(--cnvs-color2) 53.53%, var(--cnvs-color3) 95.62%);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 100vw;
+            opacity: .6;
+            background-color: #000;
+            z-index: 99;
+        }
+
+        .z-1 {
+            z-index: 0;
+            position: relative;
+        }
+
+        .flow>*+* {
+            margin-top: var(--flow-space, 1em);
+        }
+
+        /* CARD COMPONENT */
+
+        .b-r {
+            border-radius: 20px !important;
+        }
+
+        .b-rl {
+            border-radius: 20px 0px 0px 20px !important;
+        }
+
+        .b-rr {
+            border-radius: 0px 20px 20px 0px !important;
+        }
+
+
+        .button {
+
+            border-radius: 20px;
+        }
+
+        .button-pr {
+            color: #444 !important;
+            border-radius: 20px;
+            transition: .5s ease-in-out all;
+            background-color: #fae45e !important;
+            border: 2px solid #fae45e;
+        }
+
+        .button-pr:hover {
+            color: #fff !important;
+            border-radius: 20px;
+            background-color: #444 !important;
+            border: 2px solid #444;
+        }
+
+        .button-sr {
+            color: #444 !important;
+            border-radius: 20px;
+            transition: .5s ease-in-out all;
+            background-color: #fae45e !important;
+
+            border: 2px solid #fae45e;
+        }
+
+        .button-sr:hover {
+            color: #fff !important;
+            border-radius: 20px;
+            border: 2px solid #444;
+            scale: 1;
+            background-color: transparent !important;
+        }
+
+
+        .card {
+            display: grid;
+            place-items: center;
+            /* height: 28.125rem; */
+            overflow: hidden;
+            border-radius: 0.625rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+            height: 20rem;
+            width: 16rem;
+            margin-bottom: 2rem;
+        }
+
+        .pending-tm {
+            padding: 1rem;
+            color: #000;
+        }
+
+        .card>* {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .card__background {
+            object-fit: cover;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        .card__content {
+            --flow-space: 0.9375rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-self: flex-end;
+            height: 91%;
+            padding: 12% 1.25rem 1.875rem;
+            background: linear-gradient(180deg,
+                    hsla(0, 0%, 0%, 0) 0%,
+                    hsla(0, 0%, 0%, 0.3) 10%,
+                    hsl(0, 0%, 0%) 100%);
+        }
+
+        .card__content--container {
+            --flow-space: 1.25rem;
+        }
+
+        .card__title {
+            position: relative;
+            width: fit-content;
+            width: -moz-fit-content;
+            color: white;
+            /* Prefijo necesario para Firefox  */
+        }
+
+        .card__title::after {
+            content: "";
+            position: absolute;
+            height: 0.3125rem;
+            width: calc(100% + 1.25rem);
+            bottom: calc((1.25rem - 0.5rem) * -1);
+            left: -1.25rem;
+            background-color: var(--brand-color);
+        }
+
+        .card__button {
+            padding: 0.75em 1.6em;
+            width: fit-content;
+            width: -moz-fit-content;
+            /* Prefijo necesario para Firefox  */
+            font-variant: small-caps;
+            font-weight: bold;
+            border-radius: 0.45em;
+            border: none;
+            background-color: var(--brand-color);
+            font-family: var(--font-title);
+            font-size: 1.125rem;
+            color: var(--black);
+        }
+
+        .card__button:focus {
+            outline: 2px solid black;
+            outline-offset: -5px;
+        }
+
+        @media (any-hover: hover) and (any-pointer: fine) {
+            .card__content {
+                transform: translateY(62%);
+                transition: transform 500ms ease-out;
+                transition-delay: 500ms;
+            }
+
+            .card__title::after {
+                opacity: 0;
+                transform: scaleX(0);
+                transition: opacity 1000ms ease-in, transform 500ms ease-out;
+                transition-delay: 500ms;
+                transform-origin: right;
+            }
+
+            .card__background {
+                transition: transform 500ms ease-in;
+            }
+
+            .card__content--container> :not(.card__title),
+            .card__button {
+                opacity: 0;
+                transition: transform 500ms ease-out, opacity 500ms ease-out;
+            }
+
+            .h-text-white:hover {
+                color: #fff !important;
+            }
+
+            .card:hover,
+            .card:focus-within {
+                transform: scale(1.05);
+                transition: transform 500ms ease-in;
+            }
+
+            .card:hover .card__content,
+            .card:focus-within .card__content {
+                transform: translateY(0);
+                transition: transform 500ms ease-in;
+            }
+
+            .card:focus-within .card__content {
+                transition-duration: 0ms;
+            }
+
+            .card:hover .card__background,
+            .card:focus-within .card__background {
+                transform: scale(1.3);
+            }
+
+            .card:hover .card__content--container> :not(.card__title),
+            .card:hover .card__button,
+            .card:focus-within .card__content--container> :not(.card__title),
+            .card:focus-within .card__button {
+                opacity: 1;
+                transition: opacity 500ms ease-in;
+                transition-delay: 1000ms;
+            }
+
+            .card:hover .card__title::after,
+            .card:focus-within .card__title::after {
+                opacity: 1;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: opacity 500ms ease-in, transform 500ms ease-in;
+                transition-delay: 500ms;
+            }
+        }
+
+        .section-1 {
+            background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('/staticfiles/assets/images/call-to-action-bg.jpg') fixed center center;
+            background-size: cover;
+            padding: 60px 0;
+            height: 300px;
+        }
+
+        .section-2 {
+            background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url('/staticfiles/assets/images/savetime.jpeg') fixed center center;
+            background-size: cover;
+            padding: 60px 0;
+            height: 300px;
+        }
+
+        .header-chir {
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+
+        .team-desc {
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            width: 100%;
+            text-align: center !important;
+            transition: transform .2s ease-out;
+            z-index: 1 !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        .copyright-links:hover a {
+            color: #fae45e !important;
+        }
+
+        .menu-link {
+            color: #000 !important;
+        }
+
+        .text-caro {
+            font-size: 27px;
+        }
+
+        .text-caro-1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .slider-uper {
+            margin: 0rem;
+            position: relative;
+            bottom: 6em !important;
+        }
+
+        @media only screen and (max-width: 720px) {
+            .last-add {
+                font-size: 20px;
+            }
+
+            .last-add-2 {
+                font-size: 15px;
+            }
+
+            .logo-new {
+                height: 50px !important;
+            }
+
+            .menu-link {
+                color: white !important;
+            }
+
+            .section-reg-text {
+                font-size: 20px !important;
+                position: relative;
+                bottom: 1rem;
+            }
+
+            .bordof-chir {
+                font-size: 28px !important;
+                padding-bottom: 1rem;
+            }
+
+            .foot-icon {
+                padding-bottom: 1rem !important;
+            }
+
+            .bord-all {
+                position: relative;
+                left: 4rem !important;
+                top: 1rem !important;
+            }
+
+            .regi-card {
+                margin: 10% !important;
+            }
+        }
+
+        .section-reg-text {
+            font-size: 2.5rem;
+        }
+
+        .h-text-color:hover {
+            color: #fff !important;
+        }
+
+        .swiper-slide-bg::after {
+            content: "";
+            background: rgba(0, 0, 0, 0.5);
+            /* Adjust the last value (0.5) for opacity */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper">
+
+        <!-- Header
+		============================================= -->
+        <header id="header" class="transparent-header floating-header">
+            <div id="header-wrap">
+                <div class="container b-r">
+                    <div class="header-row justify-content-lg-between">
+
+                        <!-- Logo
+						============================================= -->
+                        <div id="logo" class="me-lg-0">
+                            <a href="{% url 'landing_page' %}" data-scrollto="#slider">
+                                <img class="logo-default" src="/staticfiles/assets/images/logos/logo.png"
+                                    style="height: 60px !important;" alt="Sjseen Logo">
+                            </a>
+                        </div><!-- #logo end -->
+
+                        <div class="primary-menu-trigger">
+                            <button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+                                <span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+                            </button>
+                        </div>
+
+                        <!-- Primary Navigation
+						============================================= -->
+                        <nav class="primary-menu">
+
+                            <ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250"
+                                data-offset="160">
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="aboutUs">
+                                        <div>About Us</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}">
+                                        <div>Award Category</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'media' %}"">
+                                        <div>Media</div>
+                                    </a>
+                                </li>
+                                <li class=" menu-item"><a class="menu-link ls-1 text-uppercase" href="contact">
+                                            <div>Contact Us</div>
+                                        </a>
+                                </li>
+                                <!-- <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'terms' %}"
+										>
+										<div>Terms And Conditions</div>
+									</a>
+								</li> -->
+                            </ul>
+
+                        </nav><!-- #primary-menu end -->
+
+                        <!-- Primary Navigation
+						============================================= -->
+                        <nav class="primary-menu">
+                            <ul class="menu-container header-button">
+                                <li class="menu-item">
+                                    <a href="#section-tickets"
+                                        class="button ls-1 text-uppercase fw-semibold button-pr button-effect m-0"
+                                        data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
+                                </li>
+                            </ul>
+                        </nav><!-- #primary-menu end -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrap-clone"></div>
+        </header><!-- #header end -->
+        <!-- Hero/Slider
+		============================================= -->
+        <section id="slider"
+            class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-100 include-header"
+            data-autoplay="3500" data-speed="550" data-loop="true" style="background-color: #edebed !important;">
+            <div class="slider-inner">
+                <div class="swiper-container swiper-parent">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="vertical-middle">
+                                <div class="container dark py-md-0">
+                                    <div class="row justify-content-between mt-5 col-mb-50">
+                                        <div class="col-lg-10 parallax" data-0="transform: translateY(0px); opacity: 1"
+                                            data-300="transform: translateY(50px); opacity: 0">
+                                            <span class="h5">Welcome to Sharjah Excellence
+                                                Award</span>
+                                            <h2 class="fw-bold display-4 mb-0">
+                                                Register today and showcase your capabilities</h2>
+                                            <a href="participate"
+                                                class="mt-3 button button-prls-1 text-uppercase fw-semibold button-xlarge button-pr  m-0">Register</a>
+                                            <a href="/staticfiles/assets/Shjseenflyer.pdf"
+                                                class="mt-3 button ls-1 text-uppercase button-sr fw-semibold button-xlarge m-0"
+                                                target="_blank">Download</a>
+                                        </div>
+
+                                        <!-- <div class="col-lg-6 d-flex align-items-lg-end flex-column parallax text-start text-lg-end mb-5 mb-lg-0"
+								data-0="transform: translateY(0px)" data-700="tansform: translateY(-50px)">
+								<div class="mt-auto">
+									<h2 class="mb-2 gradient-text">March 17-19, 2021</h2>
+									<h4 class="fw-normal">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</h4>
+									<a href="#section-tickets"
+										class="button ls-1 text-uppercase fw-semibold button-xxlarge button-pr  m-0"
+										data-scrollto="#section-tickets">Get Tickets Now</a>
+								</div>
+							</div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide-bg"
+                                style="background-image: url('/staticfiles/assets/images/banner3.png'); background-position: center top;">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="vertical-middle">
+                                <div class="container dark py-md-0">
+                                    <div class="row justify-content-between mt-5 col-mb-50">
+                                        <div class="col-lg-10 parallax" data-0="transform: translateY(0px); opacity: 1"
+                                            data-300="transform: translateY(50px); opacity: 0">
+                                            <span class="h5">Open for registeration now
+                                            </span>
+                                            <h2 class="fw-bold display-4 mb-0">
+                                                The new Sharjah Best Security Standard Award
+                                            </h2>
+                                            <a href="participate"
+                                                class="mt-3 button ls-1 text-uppercase fw-semibold button-xlarge button-pr  m-0"
+                                                data-scrollto="#section-tickets">Register</a>
+                                            <a href="/staticfiles/assets/Shjseenflyer.pdf"
+                                                class="mt-3 button ls-1 button-sr text-uppercase fw-semibold button-xlarge m-0"
+                                                target="_blank">Download</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-bg"
+                                style="background-image: url('/staticfiles/assets/images/banner2.png'); background-position: unset !important;">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="vertical-middle">
+                                <div class="container dark py-md-0">
+                                    <div class="row justify-content-between mt-5 col-mb-50">
+                                        <div class="col-lg-10 parallax" data-0="transform: translateY(0px); opacity: 1"
+                                            data-300="transform: translateY(50px); opacity: 0">
+                                            <span class="h5">
+                                                Welcome to Sharjah Excellence Award
+                                            </span>
+                                            <h2 class="fw-bold display-4 mb-0">
+                                                Register today and turn your dreams into reality
+                                            </h2>
+                                            <a href="participate"
+                                                class="mt-3 button ls-1 button-pr text-uppercase fw-semibold button-xlarge m-0"
+                                                data-scrollto="#section-tickets">Register</a>
+                                            <a href="/staticfiles/assets/Shjseenflyer.pdf" target="_blank"
+                                                class="mt-3 button ls-1 button-sr text-uppercase fw-semibold button-xlarge m-0">Download</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide-bg"
+                                style="background-image: url('/staticfiles/assets/images/banner1.png'); background-position: unset !important;">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-arrow-left b-rr"><i class="uil uil-angle-left-b"></i></div>
+                    <div class="slider-arrow-right b-rl"><i class="uil uil-angle-right-b"></i></div>
+
+                </div>
+            </div>
+        </section><!-- #Slider end -->
+
+        <!-- Content
+		============================================= -->
+        <section id="content" style="background-color: #000;">
+            <div class="content-wrap pt-0" style="overflow: visible;">
+
+                <!-- Section About
+				============================================= -->
+                <div id="section-about" class="section page-section pt-0" style="background-color:#edebed;">
+
+                    <div class="container-fluid" style="padding: 200px;padding-top: 100px; padding-bottom: 30px;">
+
+                        <div class="mb-5 ">
+                            <span class="display-4 fw-bold gradient-underline font-primary">About Us</span>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="row justify-content-around dark">
+                            <div class="col-md-6">
+                                <p class="text-black">The Sharjah Entrepreneurs Award targets the most successful and
+                                    leading Entrepreneurs in the United Arab Emirates whom had put a footprint in the
+                                    business world which has a significant impact on their personal and professional
+                                    life. The Sharjah Entrepreneurs Award is only open to private sector Entrepreneurs
+                                    in the UAE.
+                                </p>
+                                <br>
+                                <p class="text-black">
+                                    A set of characteristics or traits that distinguish entrepreneurs from others and
+                                    determine the method of their interaction with the business environment surrounding
+                                    them and their businesses and affecting their behavior during the development and
+                                    business management process such as: passion, vision, risk assessment, personal
+                                    development, self-confidence, hard work, and communication skills
+                                </p>
+                                <a href="./aboutUs" style="margin-top: 50px !important; margin-right: 20px !important;"
+                                    class="mt-3 button ls-1 text-uppercase fw-semibold button-xlarge button-pr m-0">Read
+                                    more</a>
+
+                            </div>
+
+                            <div class="col-md-6" style="margin-top: -70px;">
+                                <div class="about-img position-relative">
+                                    <div class="my-3 my-lg-0" style="width: 90% !important;">
+                                        <div class="gradient-bg"><img src="/staticfiles/assets/images/banner2.png"
+                                                alt="About Image" style="width: 40vw !important;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 100px;"></div>
+                    </div>
+
+                </div><!-- #section-about end -->
+
+                <div class="clear"></div>
+
+
+                <!-- Awards
+				============================================= -->
+                <div id="section-location" class="section bg-transparent m-0" style="padding-top:0px !important;">
+
+                    <div class="container" style="max-width: 80% !important;">
+                        <div class="mx-auto dark text-center" style="max-width: 70%;padding-bottom: 40px;">
+                            <span class="fw-bold section-reg-text">The Sharjah Excellence Award targets
+                                the leading businesses and corporates </span>
+                            <p class="lead text-white-50">Start your journey by registering.</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="row align-items-stretch regi-card">
+                            <div class="col-12"
+                                style="display: flex;justify-content: center;align-items: center;flex-direction: row;flex-wrap: wrap;">
+
+                                <!-- Sharjah Gulf Localization Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Localization.jpg"></img>
+                                        <h2>Sharjah Gulf Localization Award</h2>
+                                        <p style="color: #444;font-weight: 500;">A collaboration of FGCCC and Sharjah
+                                            Chamber, promotes job opportunities for GCC nationals.
+                                        </p>
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs/Localization.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+                                    </figcaption>
+                                </div>
+
+                                <!-- Sharjah Gulf Excellence Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Gulf_Excellence.jpg"></img>
+                                        <h2>Sharjah Gulf Excellence Award <br>
+                                        </h2>
+                                        <p style="color: #444;font-weight: 500;">Honors top-performing large and
+                                            small-medium enterprises across GCC, nominated based on Forbes rankings.</p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets//award_docs/Gulf_Excellence.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+                                <!-- Sharjah Excellence Award -->
+                                <div class="snip1519">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Excellence.jpg"></img>
+                                        <h2>Sharjah Excellence Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Unites large, small, and medium
+                                            enterprises for sustainable excellence, fostering performance improvement
+                                        </p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs//Excellence.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+
+                                <!-- Sharjah Entrepreneurs Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption><img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Entrepreneurs.jpg"></img>
+                                        <h2>Sharjah Entrepreneurs Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Honors outstanding individuals who have
+                                            made a significant impact in the UAE business sector.
+                                        </p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs/Entrepreneurs.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+                                    </figcaption>
+                                </div>
+
+                                <!-- Sharjah Small and Medium Enterprises Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption><img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/SME.jpg"></img>
+                                        <h2>Sharjah Small and Medium Enterprises Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Celebrates innovative ventures in
+                                            Trade, Industrial, and Services sectors, recognizing growth and excellence.
+                                        </p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs/SME.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+
+                                <!-- Sharjah Social Responsibility Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/CSR.jpg"></img>
+                                        <h2>Sharjah Social Responsibility Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Exclusive to the emirate, applauds
+                                            organizations championing comprehensive Corporate Social Responsibility,
+                                            promoting
+                                            sustainability and societal contributions.</p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs/CSR.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+                                <!-- Sharjah Best Security Standards Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Security.jpg"></img>
+                                        <h2> Sharjah Best Security Standards Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Introduced at the Economic
+                                            Sustainability Forum, emphasizes implementing safety measures for
+                                            enterprises.</p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets/award_docs/Security.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+                                <!-- Sharjah Entrepreneurs with Disability Award -->
+                                <div class="snip1519" href="participate">
+                                    <figcaption>
+                                        <img class="ion-ios-rose-outline"
+                                            src="/staticfiles/cardsImage/Disability.jpg"></img>
+                                        <h2>Sharjah Entrepreneurs with Disability Award</h2>
+                                        <p style="color: #444;font-weight: 500;">Fostering confidence and inclusivity in
+                                            entrepreneurship, aligning with visionary directives. </p>
+
+                                        <p href="participate"
+                                            class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Register</p>
+
+                                        <a href="/staticfiles/assets//award_docs/Disability.pdf" target="_blank"
+                                            class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
+                                            Download
+                                        </a>
+
+
+                                    </figcaption>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- #Related Events end -->
+
+            </div>
+            <!-- </section>#content end -->
+            <section id="call-to-action" class="wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <div class="container">
+                    <div class="row about-cols">
+                        <div class="col-md-7 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <h3>Have you made any great achievements in your business?</h3>
+                            <p>
+                                Register Today to highlight your success<br> <span style="font-size:20px"> We are
+                                    always here to support.</span>
+                            </p>
+                        </div>
+                        <div class="col-md-5 text-center wow fadeInRight"
+                            style="visibility: visible; animation-name: fadeInRight;">
+                            <a class="cta-btn" href="participate">Register Today</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section-2 z-1">
+                <div class="overlay"></div>
+                <div style="padding-top: 1.2rem;text-align: center; z-index: 100; position: relative;"
+                    class="last-section">
+                    <h2 class="last-add">Sharjah Excellence Award is your window to excellence.</h2>
+                    <div>
+                        <h3 style="color: #fff400 !important;" class="last-add-2">Are you ready to register for Sharjah
+                            Excellence Award Cycle
+                            2023</h3>
+                        <a href="participate" class="button ls-1  fw-semibold  button-them m-0"
+                            style="background-color: white !important; color: black;">Get
+                            Started</a>
+                        <div style="height: 100px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer
+		============================================= -->
+            <footer id="footer" class="dark bg-dark">
+                <div class="container">
+
+                    <!-- Footer Widgets
+				============================================= -->
+                    <div class="footer-widgets-wrap py-0">
+                        <div class="row align-items-center justify-content-center g-4 mb-5 mb-lg-0">
+                            <div class="col-12">
+                                <div class="grid-inner px-4 py-6 text-center mx-auto" style="max-width: 54rem;">
+                                    <h3 class="display-5 mt-3 mb-5" style="font-size: xx-large;">
+                                        Have you made any great achievements in your business?
+                                        <br>
+                                        We are always here to support.
+                                    </h3>
+                                    <a href="participate"
+                                        class="button button-xlarge button-pr rounded-pill mx-0 button-them">Register
+                                        Now</a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 text-lg-start" data-class="down-lg:order-1">
+                                <a href="{% url 'landing_page' %}">
+                                    <img srcset="/staticfiles/assets/images/logos/logo_white.png"
+                                        src="/staticfiles/assets/images/logos/logo_white.png" alt="Sjseen Logo Footer"
+                                        style="width: 70% !important;margin-bottom: 20px;">
+                                </a>
+                            </div>
+                            <div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
+                                <div class="d-inline-flex gap-5">
+                                    <a href="{% url 'aboutUs' %}">About</a>
+                                    <a href="{% url 'award' %}">Award Category</a>
+
+                                    <a href="{% url 'media' %}">Media</a>
+                                    <a href="{% url 'contact' %}">Contact Us</a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 text-lg-end" data-class="down-lg:order-3">
+                                <div class="d-inline-flex justify-content-center">
+                                    <a href="https://www.facebook.com/shjSEEN" style="visibility: hidden;"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                        title="Facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="
+								https://www.facebook.com/ShjSEEN"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                        title="Facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+
+                                    <a href="https://twitter.com/shjSEEN"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-twitter"
+                                        title="Twitter">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+
+                                    <a href="https://www.instagram.com/shjseen"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-instagram"
+                                        title="Instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+
+                                    <a href="https://www.linkedin.com/company/shjseen/"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-linkedin"
+                                        title="Twitter">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+
+                                    <a href="https://www.youtube.com/channel/UCNijiN0k7q3rjPyuaffUIug"
+                                        class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-youtube"
+                                        title="Twitter">
+                                        <i class="fa-brands fa-youtube"></i>
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .footer-widgets-wrap end -->
+
+                    <!-- Copyrights
+				============================================= -->
+                    <div id="copyrights" class="bg-transparent border-top border-default">
+                        <div class="row g-3">
+                            <div class="col-lg-6  text-lg-start">
+                                Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+                            </div>
+
+                            <div class="col-lg-6 text-lg-end">
+                                <div class="copyright-links mt-0">
+                                    <a href="{% url 'terms' %}">Terms &amp; Conditions</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- #copyrights end -->
+
+                </div>
+            </footer><!-- #footer end -->
+
+
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+	============================================= -->
+    <div id="gotoTop" class="uil uil-angle-up"></div>
+
+    <!-- JavaScripts
+	============================================= -->
+    <script src="/staticfiles/js/plugins.min.js" type="application/javascript"></script>
+    <script src="/staticfiles/js/functions.bundle.js" type="application/javascript"></script>
+
+    <!-- Parallax Script
+	============================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+
+    <script>
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+        jQuery(document).ready(function () {
+            // Ticket Price Changed Script
+            var elementEarlyBird = jQuery("#early-bird-person"),
+                element1Day = jQuery("#1-day-pricing-person"),
+                element2Day = jQuery("#2-day-pricing-person"),
+                elementFull = jQuery("#full-pricing-person");
+
+            elementEarlyBird.on('change', function () {
+                pricingEarlyBird = jQuery(this).prop('value');
+                jQuery('.early-bird-pricing').html('$' + (pricingEarlyBird * 39));
+            });
+
+            element1Day.on('change', function () {
+                pricing1day = jQuery(this).prop('value');
+                jQuery('.1-day-pricing').html('$' + (pricing1day * 29));
+            });
+
+            element2Day.on('change', function () {
+                pricing2Day = jQuery(this).prop('value');
+                jQuery('.2-day-pricing').html('$' + (pricing2Day * 49));
+            });
+
+            elementFull.on('change', function () {
+                pricingFull = jQuery(this).prop('value');
+                jQuery('.full-pricing').html('$' + (pricingFull * 69));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

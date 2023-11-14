@@ -1,0 +1,450 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="codepen">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>SHJSEEN</title>
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence." name="description">
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence." property="og:title">
+    <meta content="Sharjah Excellence Award, The biggest award for achievement and excellence." property="og:description">
+
+    <meta content="https://www.sharjah.gov.ae/" itemprop="image" property="og:image">
+    <meta content="https://www.sharjah.gov.ae/" property="og:url">
+
+    <meta content="https://www.sharjah.gov.ae/" itemprop="image" property="og:image">
+    <meta content="https://www.sharjah.gov.ae/" property="og:url">
+
+    <meta name="twitter:title" content="Sharjah Excellence Award, The biggest award for achievement and excellence.">
+    <meta name="twitter:description" content="Sharjah Excellence Award, The biggest award for achievement and excellence.">
+    <meta name="twitter:image" content="https://www.sharjah.gov.ae">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta content="summary" name="twitter:card">
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'img/favicon.ico' %}" />
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+
+
+    <!-- Favicons -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+    <link href="{% static 'img/favicon.ico' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.min.js"></script>
+    <script src="https://cdn.rawgit.com/Pomax/react-onclickoutside/v4.0.0/index.js"></script>
+    <!-- Bootstrap CSS File -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/website-style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/select-popover.css' %}">
+
+    <style>
+        /*.form-section:first-child {
+           visibility: hidden;
+        }*/
+    </style>
+
+    <!-- End Google Tag Manager -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var checkvalue;
+        $(document).ready(function() {
+            $('#isMember').on('change', function(){
+                checkvalue = this.checked ? 1 : 0;
+            }).change();
+            $("#serviceseeker").submit(function(e) {
+                if (document.getElementById("serviceseeker").checkValidity()) {
+                    console.log("submit");
+                    e.preventDefault();
+                    var formData = new FormData(this);
+                    {#formData.append('isMember', checkvalue);#}
+                    console.log(formData)
+                    $.ajax({
+                        url: "{% url 'register_participant' %}",
+                        type: 'POST',
+                        data: formData,
+                        success: function (data) {
+                            window.location.href = "{% url 'participate_confirmation_page' %}";
+                        },
+                        error: function (error) {
+                            console.log(error);
+                            alert("Error");
+                        },
+                        cache: false,
+                        contentType: false,
+                        processData: false
+                    });
+                }
+            });
+        })
+        // $(document).ready(function() {
+        //     $(document).on('submit', '#serviceseeker', function() {
+        //         if (document.getElementById("serviceseeker").checkValidity()) {
+        //             var form = $(this)
+        //             console.log("form before", new FormData(form))
+        //             var x = document.getElementsByClassName("select-input")[0].textContent;
+        //             form_data = form.serialize();
+        //             $.ajax({
+        //                 type: "POST",
+        //                 url: "https://portal.netalents.com/seeker/request",
+        //                 data:form_data,
+        //                 crossDomain: true,
+        //                 success: function () {
+        //                   window.location.href = "submit";
+        //               },
+        //               error: function (error) { alert("Error");}
+        //             })
+        //             console.log("form after", form)
+        //         }
+        //         return false;
+        //     })
+        // })
+    </script>
+</head>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTTBGFW"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!--==========================
+  Header
+============================-->
+<header id="header">
+    <div class="container-fluid">
+
+        <div class="logo">
+            <a href="{% url 'landing_page' %}" class="scrollto"> <img src="{% static 'img/logo.png' %}" alt=""></a>
+            <!-- <div class="arabic">
+                <a class="cta-btn" href="start_ar">AR</a>
+
+            </div> -->
+
+
+
+        </div>
+    </div>
+
+
+    </div>
+</header>
+<!-- #header -->
+<main id="main">
+    <section id="about" class="centerheight">
+        <div class="container">
+            <form class="demo-form" id="serviceseeker" method="post" enctype="multipart/form-data">
+                <!-- first -->
+                <div class="form-section designation">
+                    <header class="section-header wow fadeInUp">
+                        <h3 class="marginbottom1">
+                            We will ask you few questions to make things easy for you to register in the Shjseen faward.
+                        </h3>
+                    </header>
+                    <div class="centerul">
+                        <h4> Is this your first time participating in Sharjah Excellence Award ?</h4>
+                        <ul>
+                            <li>
+                                <label class="radio">
+                                    Yes
+                                    <input required="true" type="radio" name="is_first_time" value="true">
+                                    <span class="checkround"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="radio">
+                                    No
+                                    <input type="radio" name="is_first_time" value="false">
+                                    <span class="checkround"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="getstarted btn btn-info text-center">Get Started <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- second -->
+                <div class="form-section">
+
+                    <div class="centerul">
+                        <h4>Which category would you like to participate in?</h4>
+                        <ul>
+                            {% for category in categories %}
+                                <li>
+                                    <label class="radio">
+                                        {{ category.name }}
+                                        <input required="true" type="radio" name="category_id" value="{{ category.id }}">
+                                        <span class="checkround"></span>
+                                    </label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="form-section">
+                    <div class="centerul">
+                        <h4>Is your organization private or government?</h4>
+                        <ul>
+                            <li>
+                                <label class="radio">
+                                    Private
+                                    <input type="radio" required="true" name="organization_type" value="private">
+                                    <span class="checkround"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="radio">
+                                    Government
+                                    <input type="radio" name="organization_type" value="government">
+                                    <span class="checkround"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fourth -->
+                <div class="form-section">
+                    <div class="centerul">
+                        <h4>Where is your organization located? </h4>
+                        <select class="form-control margin-bottom20" name="organization_location" required>
+                            <option value="">Select Country</option>
+                            {% for location in organization_locations %}
+                                <option value="{{ location.value }}">{{ location.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fifth -->
+                <div class="form-section">
+
+                    <div class="centerul">
+                        <h4>Kindly upload your chamber membership certificate.</h4>
+                        <header>
+                            <input type="checkbox" value="0" name ="isMember" id="isMember">We don't have a chamber membership certificate because we are a government entity
+                        </header>
+                        <br>
+                        <label class="q5">
+                            <input type="file"
+                                   id="q5" name="membership_certificate"
+                                   accept=".pdf,.doc">
+                        </label>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- sixth -->
+                <div class="form-section">
+
+                    <div class="centerul">
+                        <h4>Kindly upload your trade license.</h4>
+                         <header>
+                            <input type="checkbox" value="0" name ="isMember" id="isMember">We don't have a trade license  because we are a government entity
+                        </header>
+                        <br>
+                        <label class="q6">
+                            <input type="file"
+                                   id="q6" name="trade_license"
+                                   accept=".pdf,.doc">
+                        </label>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- seventh -->
+
+                <!-- ten -->
+                <div class="form-section ">
+                    <div class="centerul formcss">
+                        <h4>Success! Let’s connect you with the right talent</h4>
+                        <input type="text" name="organization_name" ID="orgname" required="true" class="form-control bordernone" placeholder="Organization Name">
+                        <input type="number" name="organization_number_of_employees" ID="noofemp" required="true" class="form-control bordernone" placeholder="Number of employees">
+                        <label>Contact Person 1</label>
+                        <input type="text" name="contact_person_name" ID="contactName1" required="true" class="form-control bordernone" placeholder="Contact Name">
+                        <input type="email" name="contact_person_email" ID="emailAddress1" required="true" class="form-control bordernone" placeholder="Email">
+                        <input type="number" name="contact_person_number" ID="phoneNumber1" required="true" class="form-control bordernone" placeholder="Phone Number">
+                        <label>Contact Person 2</label>
+                        <input type="text" name="secondary_contact_person_name" ID="contactName2" required="true" class="form-control bordernone" placeholder="Contact Name">
+                        <input type="email" name="secondary_contact_person_email" ID="emailAddress2" required="true" class="form-control bordernone" placeholder="Email">
+                        <input type="number" name="secondary_contact_person_number" ID="phoneNumber2" required="true" class="form-control bordernone" placeholder="Phone Number">
+
+                        <p class="subhead2">By completing this sign up, you are agreeing to Inception's <a href="https://inceptioninnovation.com/terms-of-use" target="_blank"><u>Terms & condition </u></a>and <a href="https://inceptioninnovation.com/privacy-policy" target="_blank"><u>Privacy Policy</u></a>                                </p>
+                        <div class="text-center margin-top2">
+                            <!--                                <button type="button" onclick="SubmitForm();" class="next btn btn-info text-center connect">-->
+                            <button name="submit" type="submit" value="Submit" class="next btn btn-info text-center connect">
+                                Connect Me with a Talent <i class="fa fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="centerul">
+                        <h4>What skills would you like to see in your new hire ? </h4>
+                        <!--<input type="text" required="true" id="txtboxskills" class="form-control bordernone" placeholder="Desired area of expertise (e.g. Javascript, Ruby, Etc.)">-->
+                        <p class="subhead">Popular skills for Software Developers
+                            <!-- <i class="fa fa-angle-down"></i> -->
+                        </p>
+                        <div id="root" name="Q6"></div>
+                    </div>
+                    <div class="form-navigation">
+                        <div class="text-center margin-top2">
+                            <button type="button" class="previous btn pull-left"><i class="fa fa-angle-left"></i> Back</button>
+                            <button type="button" class="next btn btn-info pull-right">Next <i class="fa fa-angle-right"></i></button>
+                            <span class="clearfix"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+
+
+<footer id="bottomlink" class="footerfixed">
+
+
+    <div class="container">
+        <div class="row about-cols">
+            <div class="col-md-6 text-left">
+                <b> <a href="https://inceptioninnovation.com/" target="_blank">SHJSEEN</a></b>&nbsp; Copyright 2022 All rights reserved
+                <br />
+                <b>Powered By <a href="https://inception.ae/" target="_blank">Sharjah Chamber Of Commerce</a></b>
+            </div>
+            <div class="col-md-6 text-right">
+                <b>
+                    Follow us
+                </b>
+                <br />
+                <div class="social-links">
+
+                    <a href="https://www.facebook.com/INCEPTIONINNOVATION/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/inception_innovation/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+
+                    <a href="https://www.linkedin.com/company/3659104/" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/formslide.js' %}"></script>
+
+<script src="{% static 'js/select-popover.js' %}"></script>
+
+<script id="rendered-js">
+    $(function() {
+        var $sections = $('.form-section');
+
+        function navigateTo(index) {
+            // Mark the current section with the class 'current'
+            $sections.
+            removeClass('current').
+            eq(index).
+            addClass('current');
+            // Show only the navigation buttons that make sense for the current section:
+            $('.form-navigation .previous').toggle(index > 0);
+            var atTheEnd = index >= $sections.length - 1;
+            $('.form-navigation .next').toggle(!atTheEnd);
+            $('.form-navigation .getstarted').toggle(!atTheEnd);
+            $('.form-navigation [type=submit]').toggle(atTheEnd);
+        }
+
+        function curIndex() {
+            // Return the current index by looking at which section has the class 'current'
+            return $sections.index($sections.filter('.current'));
+        }
+
+        // Previous button is easy, just go back
+        $('.form-navigation .previous').click(function() {
+            navigateTo(curIndex() - 1);
+        });
+
+        // Next button goes forward iff current block validates
+        $('.form-navigation .next').click(function() {
+            if ($('.demo-form').parsley().validate({
+                group: 'block-' + curIndex()
+            }))
+                navigateTo(curIndex() + 1);
+        });
+
+        $('.form-navigation .getstarted').click(function() {
+            if ($('.demo-form').parsley().validate({
+                group: 'block-' + curIndex()
+            }))
+                navigateTo(curIndex() + 1);
+        });
+
+        // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
+        $sections.each(function(index, section) {
+            $(section).find(':input').attr('data-parsley-group', 'block-' + index);
+        });
+        navigateTo(0); // Start at the beginning
+    });
+    //# sourceURL=pen.js
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1101 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="Shjseen">
+	<meta name="description" content="">
+
+
+	<link rel="icon" href="/staticfiles/assets/images/favicon.ico" type="image/ico">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&Roboto:wght@400;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="/staticfiles/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="/staticfiles/css/font-icons.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="/staticfiles/demos/conference/conference.css">
+
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="/staticfiles/css/swiper.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/staticfiles/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<!-- Document Title
+	============================================= -->
+	<title>Shjseen</title>
+
+</head>
+
+<body class="stretched">
+
+	<style>
+		.logo-new {
+			background: white;
+		}
+
+		body {
+			overflow-x: hidden;
+		}
+
+		.button-them {
+			background-color: #fae45e !important;
+		}
+
+		@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+		:root {
+			/* Colors */
+			--brand-color: hsl(46, 100%, 50%);
+			--black: hsl(0, 0%, 0%);
+			--white: hsl(0, 0%, 100%);
+			/* Fonts */
+			--font-title: "Montserrat", sans-serif;
+			--font-text: "Lato", sans-serif;
+		}
+
+		/* RESET */
+
+		/* Box sizing rules */
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		/* Remove default margin */
+		body,
+		h2,
+		p {
+			margin: 0;
+		}
+
+		/* GLOBAL STYLES */
+		body {
+			display: grid;
+			place-items: center;
+			height: 100vh;
+		}
+
+		h2 {
+			font-size: 2.25rem;
+			font-family: var(--font-title);
+			color: var(--white);
+			line-height: 1.1;
+		}
+
+		p {
+			font-family: var(--font-text);
+			font-size: 1rem;
+			line-height: 1.5;
+			color: #444;
+		}
+
+		.flow>*+* {
+			margin-top: var(--flow-space, 1em);
+		}
+
+		/* CARD COMPONENT */
+
+		.card {
+			display: grid;
+			place-items: center;
+			/* height: 28.125rem; */
+			overflow: hidden;
+			border-radius: 0.625rem;
+			box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+			height: 20rem;
+			width: 16rem;
+			margin-bottom: 2rem;
+		}
+
+		.pending-tm {
+			padding: 1rem;
+			color: #000;
+		}
+
+		.card>* {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+		.card__background {
+			object-fit: cover;
+			max-width: 100%;
+			height: 100%;
+		}
+
+		.card__content {
+			--flow-space: 0.9375rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-self: flex-end;
+			height: 91%;
+			padding: 12% 1.25rem 1.875rem;
+			background: linear-gradient(180deg,
+					hsla(0, 0%, 0%, 0) 0%,
+					hsla(0, 0%, 0%, 0.3) 10%,
+					hsl(0, 0%, 0%) 100%);
+		}
+
+		.card__content--container {
+			--flow-space: 1.25rem;
+		}
+
+		.card__title {
+			position: relative;
+			width: fit-content;
+			width: -moz-fit-content;
+			color: white;
+			/* Prefijo necesario para Firefox  */
+		}
+
+		.copyright-links:hover {
+			color: #fae45e !important;
+		}
+
+		.card__title::after {
+			content: "";
+			position: absolute;
+			height: 0.3125rem;
+			width: calc(100% + 1.25rem);
+			bottom: calc((1.25rem - 0.5rem) * -1);
+			left: -1.25rem;
+			background-color: var(--brand-color);
+		}
+
+		.card__button {
+			padding: 0.75em 1.6em;
+			width: fit-content;
+			width: -moz-fit-content;
+			/* Prefijo necesario para Firefox  */
+			font-variant: small-caps;
+			font-weight: bold;
+			border-radius: 0.45em;
+			border: none;
+			background-color: var(--brand-color);
+			font-family: var(--font-title);
+			font-size: 1.125rem;
+			color: var(--black);
+		}
+
+		.card__button:focus {
+			outline: 2px solid black;
+			outline-offset: -5px;
+		}
+
+		@media (any-hover: hover) and (any-pointer: fine) {
+			.card__content {
+				transform: translateY(62%);
+				transition: transform 500ms ease-out;
+				transition-delay: 500ms;
+			}
+
+			.card__title::after {
+				opacity: 0;
+				transform: scaleX(0);
+				transition: opacity 1000ms ease-in, transform 500ms ease-out;
+				transition-delay: 500ms;
+				transform-origin: right;
+			}
+
+			.card__background {
+				transition: transform 500ms ease-in;
+			}
+
+			.card__content--container> :not(.card__title),
+			.card__button {
+				opacity: 0;
+				transition: transform 500ms ease-out, opacity 500ms ease-out;
+			}
+
+			.card:hover,
+			.card:focus-within {
+				transform: scale(1.05);
+				transition: transform 500ms ease-in;
+			}
+
+			.banner-section {
+				background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/terms_b.jpeg') fixed bottom;
+				background-size: cover;
+				padding: 20vh 0;
+				height: 500px;
+				position: relative;
+				top: -20vh;
+				bottom: 3rem;
+			}
+
+			.card:hover .card__content,
+			.card:focus-within .card__content {
+				transform: translateY(0);
+				transition: transform 500ms ease-in;
+			}
+
+			.card:focus-within .card__content {
+				transition-duration: 0ms;
+			}
+
+			.card:hover .card__background,
+			.card:focus-within .card__background {
+				transform: scale(1.3);
+			}
+
+			.card:hover .card__content--container> :not(.card__title),
+			.card:hover .card__button,
+			.card:focus-within .card__content--container> :not(.card__title),
+			.card:focus-within .card__button {
+				opacity: 1;
+				transition: opacity 500ms ease-in;
+				transition-delay: 1000ms;
+			}
+
+			.card:hover .card__title::after,
+			.card:focus-within .card__title::after {
+				opacity: 1;
+				transform: scaleX(1);
+				transform-origin: left;
+				transition: opacity 500ms ease-in, transform 500ms ease-in;
+				transition-delay: 500ms;
+			}
+		}
+
+		.section-1 {
+			background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(/staticfiles/assets/images/call-to-action-bg.jpg) fixed center center;
+			background-size: cover;
+			padding: 60px 0;
+			height: 300px;
+		}
+
+		.section-2 {
+			background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(/staticfiles/assets/images/savetime.jpg) fixed center center;
+			background-size: cover;
+			padding: 60px 0;
+			height: 300px;
+		}
+
+		.header-chir {
+			padding-bottom: 2rem;
+			text-align: center;
+		}
+
+		.button-pr {
+			color: #444 !important;
+			border-radius: 20px;
+			transition: .5s ease-in-out all;
+			background-color: #fae45e !important;
+			border: 2px solid #fae45e;
+		}
+
+		.button-pr:hover {
+			color: #fff !important;
+			border-radius: 20px;
+			background-color: #444 !important;
+			border: 2px solid #444;
+		}
+
+		.team-desc {
+			position: absolute;
+			left: 0;
+			bottom: 15px;
+			width: 100%;
+			text-align: center !important;
+			transition: transform .2s ease-out;
+			z-index: 1 !important;
+			padding-left: 1rem !important;
+			padding-right: 1rem !important;
+		}
+
+		.menu-link {
+			color: #000 !important;
+		}
+
+		.text-caro {
+			font-size: 27px;
+		}
+
+		.text-caro-1 {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		.slider-uper {
+			margin: 0rem;
+			position: relative;
+			bottom: 6em !important;
+		}
+
+		@media only screen and (max-width: 720px) {
+			.last-add {
+				font-size: 20px;
+			}
+
+			.last-add-2 {
+				font-size: 15px;
+			}
+
+			.logo-new {
+				height: 50px !important;
+			}
+
+			.menu-link {
+				color: white !important;
+			}
+
+			.section-reg-text {
+				font-size: 20px !important;
+				position: relative;
+				bottom: 1rem;
+			}
+
+			.bordof-chir {
+				font-size: 28px !important;
+				padding-bottom: 1rem;
+			}
+
+			.foot-icon {
+				padding-bottom: 1rem !important;
+			}
+
+			.bord-all {
+				position: relative;
+				left: 4rem !important;
+				top: 1rem !important;
+			}
+
+			.regi-card {
+				margin: 10% !important;
+			}
+		}
+
+		.section-reg-text {
+			font-size: 2.5rem;
+		}
+
+		.h-text-color:hover {
+			color: #fff !important;
+	 
+		}
+	</style>
+
+	<style>
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #2c3145;
+		}
+
+		a,
+		a:hover,
+		a:focus,
+		a:active {
+			text-decoration: none;
+			outline: none;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.section_all {
+			position: relative;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			min-height: 100vh;
+		}
+
+		.section-title {
+			font-weight: 700;
+			text-transform: capitalize;
+			letter-spacing: 1px;
+		}
+
+		.section-subtitle {
+			letter-spacing: 0.4px;
+			line-height: 28px;
+			max-width: 550px;
+		}
+
+		.section-title-border {
+			background-color: #000;
+			height: 1 3px;
+			width: 44px;
+		}
+
+		.section-title-border-white {
+			background-color: #fff;
+			height: 2px;
+			width: 100px;
+		}
+
+		.text_custom {
+			color: #00bd2a;
+		}
+
+		.about_icon i {
+			font-size: 22px;
+			height: 65px;
+			width: 65px;
+			line-height: 65px;
+			display: inline-block;
+			background: #fff;
+			border-radius: 35px;
+			color: #00bd2a;
+			box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+		}
+
+		.about_header_main .about_heading {
+			max-width: 450px;
+			font-size: 24px;
+		}
+
+		.about_icon span {
+			position: relative;
+			top: -10px;
+		}
+
+		.about_content_box_all {
+			padding: 28px;
+		}
+
+		h2 {
+			margin-top: 40px;
+			margin-bottom: 40px;
+			color: #333 !important;
+		}
+
+		h5 {
+			color: #333 !important;
+		}
+
+		.b-r {
+			border-radius: 20px;
+		}
+
+		.button {
+			border-radius: 20px;
+		}
+	</style>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" style="background: #ebebeb !important;">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header floating-header">
+			<div id="header-wrap">
+				<div class="container b-r">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-0">
+
+							<a href="{% url 'landing_page' %}">
+								<img class="logo-default" src="/staticfiles/assets/images/logos/logo.png"
+									style="height: 60px !important;" alt="Sjseen Logo">
+								<img class="logo-dark"
+									srcset="demos/conference/images/logo-dark.png, /staticfiles/assets/images/logos/logo.png 2x"
+									src="/staticfiles/assets/images/logos/logo.png" alt="Sjseen Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+
+							<ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250"
+								data-offset="160">
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="aboutUs">
+										<div>About Us</div>
+									</a>
+								</li>
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}">
+										<div>Award Category</div>
+									</a>
+								</li>
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'media' %}"">
+										<div>Media</div>
+									</a>
+								</li>
+								<li class=" menu-item"><a class="menu-link ls-1 text-uppercase" href="contact">
+											<div>Contact Us</div>
+										</a>
+								</li>
+
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container header-button">
+								<li class="menu-item">
+									<a href="#section-tickets"
+										class="button ls-1 text-uppercase fw-semibold button-pr button-effect m-0"
+										data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+		<!--contactform-->
+
+		<div class="row">
+			<div class="banner-section">
+				<div style="text-align: center; margin: 6%;color: white;">
+					<h2 style="color: white;margin-top: 0px !important;margin-bottom: 0px !important;">Terms And
+						Conditions</h2>
+				</div>
+			</div>
+		</div>
+
+		<section class="section_all" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section_title_all">
+							<h2>Terms And Conditions</h2>
+							<p class="section_subtitle mx-auto">Please read these Terms and Conditions
+								carefully before registering for the SHJSEEN Prestige Business Award (hereinafter
+								referred to as "the Award"). By registering for the Award, you acknowledge that you have
+								read, understood, and agreed to abide by these terms. These Terms and Conditions are a
+								legally binding agreement between you and SHJSEEN, the Award organizers, and they govern
+								your participation in the Award. If you do not agree with any of the terms or
+								conditions, please do not register for the Award.</p>
+							<div class="">
+								<i class=""></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-text">
+					<div class="col-lg-12">
+						<h2>1. Eligibility:</h2>
+						<div class="head-line">
+							<p>1.1. To participate in the Award, you must be a registered business entity.</p>
+							<p>1.2. Employees, affiliates, or immediate family members of the Award organizers are not
+								eligible to participate.</p>
+							<p>1.3. The Award is open to businesses worldwide, and the eligibility criteria may vary
+								based on the specific category you wish to enter.</p>
+
+						</div>
+						<h2> 2. Registration:</h2>
+						<div class="head-line">
+
+							<p>2.1. Registration for the Award can only be completed through the official Award website
+								or designated channels.</p>
+							<p>2.2. You must provide accurate and complete information during registration.</p>
+							<p>2.3. Registration fees, if applicable, are non-refundable unless otherwise stated in
+								these Terms and Conditions.</p>
+						</div>
+						<h2>3. Award Category:</h2>
+						<div class="head-line">
+							<p>3.1. The Award offers various categories, and you may choose the category that best
+								represents your business.</p>
+							<p>3.2. The organizers reserve the right to merge or cancel categories due to insufficient
+								entries.</p>
+
+						</div>
+						<h2>4. Submission of Materials:</h2>
+						<div class="head-line">
+							<p>4.1. You must submit all required materials, such as documentation, videos, and images,
+								according to the specified guidelines.</p>
+							<p>4.2. Submissions must be your original work, and you must have the rights and permissions
+								to use any third-party content.</p>
+							<p>4.3. The organizers may disqualify entries that violate copyright, trademark, or any
+								other intellectual property rights.</p>
+						</div>
+						<h2>5. Judging Process:</h2>
+						<div class="head-line">
+							<p>5.1. The judging panel will assess entries based on predetermined criteria.</p>
+							<p>5.2. The decision of the judging panel is final and binding and cannot be challenged</p>
+							<p>5.3. No feedback on individual entries will be provided.</p>
+						</div>
+						<h2>6. Awards and Prizes:</h2>
+						<div class="head-line">
+							<p>6.1. The organizers will announce the winners in each category.</p>
+							<p>6.2. The prizes awarded, if any, will vary based on the category and may be subject to
+								change at the discretion of the organizers.</p>
+							<p>6.3. Prizes may include certificates, trophies, cash awards, or other benefits as
+								outlined on the official Award website.</p>
+						</div>
+						<h2>7. Use of Intellectual Property:</h2>
+						<div class="head-line">
+							<p>7.1. By participating in the Award, you grant the organizers the right to use your
+								business name, logo, and submitted materials for promotional and marketing purposes.</p>
+							<p>7.2. You retain ownership of your intellectual property rights.</p>
+						</div>
+						<h2>8. Confidentiality:</h2>
+						<div class="head-line">
+							<p>8.1. The organizers will treat all submitted materials with confidentiality and will not
+								disclose them to third parties without your consent.</p>
+							<p>8.2. The organizers are not responsible for any confidential information you disclose in
+								your submission.</p>
+						</div>
+						<h2>9. Disqualification:</h2>
+						<div class="head-line">
+							<p>9.1. The organizers may disqualify participants for any violation of these Terms and
+								Conditions or any attempt to tamper with the registration process or Award in any way.
+							</p>
+						</div>
+						<h2>10. Modification and Cancellation:</h2>
+						<div class="head-line">
+							<p>10.1. The organizers reserve the right to modify, suspend, or cancel the Award at any
+								time, for any reason, without prior notice.</p>
+
+						</div>
+						<h2>11. Limitation of Liability:</h2>
+						<div class="head-line">
+							<p>11.1. The organizers are not liable for any loss, damage, or injury that may result from
+								your participation in the Award.</p>
+							<p>11.2. You participate in the Award at your own risk.</p>
+						</div>
+						<h2>12. Governing Law:</h2>
+						<div class="head-line">
+							<p>12.1. These Terms and Conditions are governed by the laws of the jurisdiction where the
+								organizers are based.</p>
+
+						</div>
+						<h2>13. Agreement to Terms:</h2>
+						<div class="head-line">
+							<p>13.1. By registering for the SHJSEEN Prestige Business Award, you acknowledge that you
+								have read and agreed to these Terms and Conditions.</p>
+
+						</div>
+						<div class="paragraph" style="margin-top: 2rem;">
+							<div class="head-line">
+								<h5>These Terms and Conditions may be updated or amended at the discretion of SHJSEEN.
+									It is your responsibility to review these terms periodically. If you continue to
+									participate in the Award, you are deemed to have accepted any changes made to these
+									Terms and Conditions.</h5>
+
+							</div>
+						</div>
+
+						<div class="paragraph" style="margin-top: 2rem;">
+							<h2>Mission:</h2>
+							<div class="head-line">
+								<h5>To foster a culture of continuous improvement and excellence in the business
+									community of the emirate of Sharjah, by recognizing and promoting outstanding
+									achievements, innovation, and sustainable growth across all sectors.</h5>
+
+							</div>
+						</div>
+						<div class="paragraph" style="margin-top: 2rem;">
+							<h2>Vision:</h2>
+							<div class="head-line">
+								<h5>To be the beacon of excellence and innovation in the heart of the Middle East,
+									positioning the emirate of Sharjah as a global hub where businesses and investments
+									converge, setting the gold standard for performance excellence, and contributing to
+									the sustainable development of the GCC region.</h5>
+
+							</div>
+						</div>
+						<div class="paragraph" style="margin-top: 2rem;">
+							<h2>Objectives:</h2>
+							<div class="head-line">
+								<h5>Recognize and Celebrate Excellence: The SHJSEEN Award seeks to recognize and
+									celebrate exceptional accomplishments and innovations across the business landscape
+									in Sharjah, honoring organizations that consistently strive for excellence.</h5>
+								<h5>
+									Promote Continuous Improvement: We aim to encourage a culture of continuous
+									improvement within organizations, inspiring them to adopt best practices, foster
+									innovation, and deliver outstanding results to enhance the competitiveness of the
+									emirate.
+								</h5>
+								<h5>
+									Enhance Competitiveness: Our objective is to elevate the competitiveness of
+									Sharjah's businesses on the global stage by assisting them in achieving higher
+									levels of performance excellence, which, in turn, will attract more investments and
+									opportunities.
+								</h5>
+								<h5>
+									Foster Sustainability: We are committed to promoting sustainable business practices
+									and social responsibility, encouraging organizations to integrate environmental,
+									social, and governance (ESG) principles into their strategies and operations.
+								</h5>
+								<h5>
+									Inspire Innovation: The SHJSEEN Award aims to inspire and reward innovation in
+									products, services, and processes, fostering a business environment that embraces
+									change and creativity as a means to long-term success.
+								</h5>
+								<h5>
+									Cultivate Collaboration: We believe in fostering collaborations and partnerships
+									among businesses, creating a network that shares knowledge, experiences, and
+									resources to uplift the entire business community.
+								</h5>
+								<h5>
+									Contribute to Economic Growth: Our award endeavors to contribute to the economic
+									growth and diversification of the emirate, attracting national and international
+									investors who seek to engage with organizations committed to excellence.
+								</h5>
+								<h5>
+									Empower the Workforce: We strive to empower the workforce by encouraging
+									organizations to invest in their employees' development and well-being, recognizing
+									that a skilled, motivated, and engaged workforce is crucial for overall success.
+								</h5>
+								<h5>
+									Set Global Standards: SHJSEEN Award aims to set global benchmarks for performance
+									excellence, influencing best practices and quality standards that are recognized and
+									respected on an international scale.
+								</h5>
+								<h5>
+									Uphold Ethical Values: We are committed to upholding the highest ethical standards
+									in business operations and conduct, promoting transparency, integrity, and
+									responsible corporate governance.
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 
+		<section id="CSR" class="container awards">
+			<div class="packet">
+				<img src="/staticfiles/cardsImage/CSR.jpg" alt="Excelence">
+				<div class="box">
+					<h2 class="title">Sharjah Corporate Social Responsibility Award</h2>
+					<div class="jar">
+						<p class="subtitle">About the Award</p>
+						<p class="subtext">
+							The Sharjah CSRAward, restricted to Sharjah, recognizes organizations in both sectors
+							“Public & Private” who adopted a systematic work plan focusing on major and fundamental CSR
+							aspects as community, environment, workplace, and people of interest (stakeholders,
+							investors, customers, suppliers).The organization interested in applying for the CSR Award
+							must paying attention to the importance of improving their Corporate Social Responsibility
+							performance since it is an opportunity to promote their activities, enhance their
+							reputation, efficiency, productivity and success as leaders in achieving sustainability and
+							to celebrate the important contributions that social responsibility practices make to our
+							economy and society. The Sharjah Social Responsibility Award divides into different
+							assessment criteria based on above mentioned aspects:
+						</p>
+					</div>
+					<div class="list">
+						<h4 style="margin-top: 20px;">First Aspect –Community(400 Pts):</h4>
+						<ul id="disc">
+							<li>Society development practices: Engagement in awareness campaigns and push participation
+								in all different aspects</li>
+							<li>Charity and Humanitarian practices: Engagement with local charity and offer
+								supportthrough a variety of collaborative means, visits to hospitals or elderly nursing
+								homes, etc.</li>
+							<li>Volunteering practices: giving back to local community by engaging in meaningful
+								activities and enriching community.</li>
+							<li>Educational practices: as providing summer training courses to university students to
+								help develop their work skills.</li>
+
+						</ul>
+					</div>
+					<div class="list">
+						<h4 style="margin-top: 20px;">Second Aspect –Environment(100 Pts):</h4>
+						<ul id="disc">
+							<li>Acquire global and international certificates and licenses in the field of CSR such as
+								ISO</li>
+							<li>Environment protection related awareness campaigns</li>
+						</ul>
+					</div>
+					<div class="list">
+						<h4 style="margin-top: 20px;">Third Aspect –Work Place (250 Pts):</h4>
+						<ul id="disc">
+							<li>Offer job vacancies in different fields</li>
+							<li>Youth employment and engagement in work force to develop experience and create a wide
+								range of opportunities.</li>
+							<li>Framed training and development programs for employees</li>
+							<li>Rewards and promotions given to employees</li>
+							<li>Increase performance indicators and productivity of employees by offering flexi-work
+								hours, nursing hours, health insurance, and giving other personal permissions and
+								leaves.</li>
+
+						</ul>
+					</div>
+
+					<div class="list">
+						<h4 style="margin-top: 20px;">Fourth Aspect –People of Interest (Stakeholders, Partners,
+							Customers,Suppliers, etc.)(250 Pts):</h4>
+						<ul id="disc">
+							<li>Adopt a direct communication system to get feedback and exchange thoughts and
+								suggestions by having scheduled meetings and gatherings</li>
+							<li>Have a call center or customer relations/service</li>
+							<li>Official presence on website and social media platforms</li>
+							<li>Availability of suggestion, complains and survey boxes.</li>
+							<li>Transform organization’s services to electronic (through website) and make available in
+								all branches</li>
+						</ul>
+					</div>
+					<div class="jar">
+						<p class="subtitle" style="margin-top: 20px;">How to apply</p>
+					</div>
+					<div class="list">
+						<ul id="disc">
+							<li>Visit our website <a href="https://shjseen.ae"
+									style="color: #007;text-decoration: underline;">www.shjseen.ae</a></li>
+							<li>Fill the Registration Form</li>
+							<li>Complete and Submit the Registration on the link specified in our website</li>
+						</ul>
+					</div>
+					<div class="box">
+						<h2 class="title" style="margin-top: 20px;">The organization wishing to apply must meet the
+							following terms and conditions:</h2>
+					</div>
+					<div class="list">
+						<ul id="disc">
+							<li>Exercise its economic activity in the emirate of Sharjah (Private Sector).</li>
+							<li>Must have a valid license, a membership with Sharjah Chamber of Commerce and Industry
+								and/or a valid license from any of Sharjah Free Zone Authorities (Private Sector)</li>
+							<li>A minimum of two years of operation.</li>
+							<li>Sound and clear financial and legal standing.</li>
+							<li>CSR Programs/Projects must be in execution phase for a period not less than 1 year prior
+								to date of application</li>
+							<li>Abide by the award deadlines.</li>
+							<li>Re-participation in the award is allowed after2 cycles from date of ceremony.</li>
+							<li>Application of previous winners in future cycles is eligible only in case of applying
+								with new CSR Programs / Projects.</li>
+							<li>Application can include a number of (one) to a maximum of (three) CSR Programs /
+								Projects</li>
+							<li>The Government Organization with highest assessment score will be rewarded the winner of
+								Government Sector and the Private Company with highest assessment score will be rewarded
+								the winner of Private Sector.</li> 
+						</ul>
+					</div> 
+					<div class="box">
+						<h2 class="title" style="margin-top: 20px;">Required Documents:</h2>
+					</div>
+					<div class="list">
+						<h4 style="margin-top: 20px;">The organization wishing to apply must submit the following documents:</h4>
+						<ul id="disc">
+							<li>Registration Form.</li>
+							<li>Valid copy of its Economic Activity License (Private sector)</li>
+							<li>Valid copy of Membership from SharjahChamber of Commerce & Industry (Private Sector)</li>
+							<li>Submission Form.</li>
+							<li>Organizational structure.</li>
+							<li>Summary of achievements, activities and accomplishments. (Copies of relevant documents to be attached).</li>
+							<li>Description of CSR project (Copies of relevant documents to be attached).</li>
+							<li>CSR Project outcome impact on society (Copies of relevant documents to be attached).</li>
+							<li>Future plans and further improvements. (Copies of relevant documents to be attached).</li>
+						</ul>
+					</div>
+					
+					<div class="box">
+						<h2 class="title" style="margin-top: 20px;">Writing Standards:</h2>
+					</div>
+					<div class="list">
+					 	<ul id="disc">
+							<li>Follow Format/ Margin sent.</li>
+							<li>No. of Pages in Submission Document: 35 Pgs. max.</li>
+							<li>Follow Heading and Sub-heading numeration.</li>
+							<li>Language: Arabic / English</li>
+							<li>Font Size: 12</li>
+							<li>Font Type: Arial/ Times New Roman</li>
+							<li>Dividers: Dividers do not count towards number of pages.</li>
+							<li>Front Cover</li>
+							<li>Standards for Charts and for Diagrams.</li>
+							<li>Numbered Attachments.</li>
+
+						</ul>
+					</div>
+					<br><br>
+					<br><br>
+				</div>
+			</div>
+		</section> -->
+
+
+
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark bg-dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap py-0">
+					<div class="row align-items-center justify-content-center g-4 mb-5 mb-lg-0">
+						<div class="col-12">
+							<div class="grid-inner px-4 py-6 text-center mx-auto" style="max-width: 54rem;">
+								<h3 class="display-5 mt-3 mb-5 text-white" style="font-size: xx-large; ">
+									Have you made any great achievements in your business?
+									<br>
+									We are always here to support.
+								</h3>
+								<a href="participate"
+									class="button button-xlarge text-white rounded-pill mx-0 button-them"
+									style="color: #444 !important;">Register Now</a>
+							</div>
+						</div>
+
+						<div class="col-lg-3 text-lg-start" data-class="down-lg:order-1">
+							<img srcset="/staticfiles/assets/images/logos/logo_white.png"
+								src="/staticfiles/assets/images/logos/logo_white.png" alt="Sjseen Logo Footer"
+								style="width: 70% !important;margin-bottom: 20px !important;">
+						</div>
+						<div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
+							<div class="d-inline-flex gap-5">
+								<a href="aboutUs">About</a>
+								<a href="{% url 'award' %}">Award Category</a>
+								<a href="{% url 'media' %}">Media</a>
+								<a href=" contact">Contact Us</a>
+							</div>
+						</div>
+						<div class="col-lg-3 text-lg-end" data-class="down-lg:order-3">
+							<div class="d-inline-flex justify-content-center">
+								<a href="
+								https://www.facebook.com/ShjSEEN"
+									class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+									title="Facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="https://twitter.com/shjSEEN"
+									class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-twitter"
+									title="Twitter">
+									<i class="fa-brands fa-twitter"></i>
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+
+								<a href="https://www.instagram.com/shjseen"
+									class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-instagram"
+									title="Instagram">
+									<i class="fa-brands fa-instagram"></i>
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+
+								<a href="https://www.linkedin.com/company/shjseen/"
+									class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-linkedin"
+									title="Twitter">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+
+								<a href="https://www.youtube.com/channel/UCNijiN0k7q3rjPyuaffUIug"
+									class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-youtube"
+									title="Twitter">
+									<i class="fa-brands fa-youtube"></i>
+									<i class="fa-brands fa-youtube"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- .footer-widgets-wrap end -->
+
+				<!-- Copyrights
+				============================================= -->
+				<div id="copyrights" class="bg-transparent border-top border-default">
+					<div class="row g-3">
+						<div class="col-lg-6  text-lg-start">
+							Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+						</div>
+
+						<div class="col-lg-6 text-lg-end">
+							<div class="copyright-links mt-0">
+								<a href="terms">Terms &amp; Conditions</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- #copyrights end -->
+
+			</div>
+		</footer><!-- #footer end -->
+
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/plugins.min.js"></script>
+	<script src="js/functions.bundle.js"></script>
+
+	<!-- Parallax Script
+	============================================= -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
+
+	<script>
+		$(".hover").mouseleave(
+			function () {
+				$(this).removeClass("hover");
+			}
+		);
+		jQuery(document).ready(function () {
+			// Ticket Price Changed Script
+			var elementEarlyBird = jQuery("#early-bird-person"),
+				element1Day = jQuery("#1-day-pricing-person"),
+				element2Day = jQuery("#2-day-pricing-person"),
+				elementFull = jQuery("#full-pricing-person");
+
+			elementEarlyBird.on('change', function () {
+				pricingEarlyBird = jQuery(this).prop('value');
+				jQuery('.early-bird-pricing').html('$' + (pricingEarlyBird * 39));
+			});
+
+			element1Day.on('change', function () {
+				pricing1day = jQuery(this).prop('value');
+				jQuery('.1-day-pricing').html('$' + (pricing1day * 29));
+			});
+
+			element2Day.on('change', function () {
+				pricing2Day = jQuery(this).prop('value');
+				jQuery('.2-day-pricing').html('$' + (pricing2Day * 49));
+			});
+
+			elementFull.on('change', function () {
+				pricingFull = jQuery(this).prop('value');
+				jQuery('.full-pricing').html('$' + (pricingFull * 69));
+			});
+		});
+	</script>
+
+</body>
+
+</html>

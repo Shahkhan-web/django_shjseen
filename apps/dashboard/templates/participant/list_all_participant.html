@@ -1,0 +1,321 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block main_content %}
+    <div class="hk-pg-wrapper">
+        <!-- Breadcrumb -->
+        <nav class="hk-breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-light bg-transparent">
+                <li class="breadcrumb-item"><a href="#">Participant</a></li>
+                <li class="breadcrumb-item active" aria-current="page">All Participant</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <!-- Container -->
+        <div class="">
+            <!-- Title -->
+            <div class="hk-pg-header">
+                <h4 class="hk-pg-title">&nbsp;&nbsp;&nbsp;<span class="pg-title-icon"><span class="feather-icon"><i data-feather="archive"></i></span></span>All Participants</h4>
+                <div class="hk-navbar-content">
+                    <button class="btn-primary" id='export' url="{% url 'export_all_participant' %}">
+                        Export
+                    </button>&nbsp;&nbsp;
+                    <i class="fa fa-calendar" style="font-size:24px;color:#04ae11;" id="daterange"
+                       aria-label="date_range" data-url="#">
+                    </i>&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+            <!-- /Title -->
+
+
+            <!-- Row -->
+            <div class="">
+                <div class="col-xl-12">
+                    <section class="hk-sec-wrapper">
+                        <h5 class="hk-sec-title">Data Table</h5>
+                        <div class="row">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<p class="mb-30">This data has been fetch <code>{{ last_synced | date:"SHORT_DATETIME_FORMAT" }}</code>..</p>
+
+                            <div class="form-outline hk-navbar-content" style="position:absolute; right: 50px;">
+                                <input type="search" id="searchInput" class="form-control" placeholder="Search"
+                                       value="{{ request.GET.search }}"
+                                       aria-label="Search" data-url="{% url 'list_all_participant' %}" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="table-wrap">
+                                    <div class="table-responsive">
+                                        <table id="datable_1" class="table table-hover sortable table-bordered mb-0 w-100 display pb-30">
+                                            <thead class="thead-success ">
+                                            <tr>
+                                                <th><b>Date/Time</b></th>
+                                                <th><b>Organization Name</b></th>
+                                                <th><b>Is First Time</b></th>
+                                                <th><b>Category</b></th>
+                                                <th><b>Organization Type</b></th>
+                                                <th><b>Organization Location</b></th>
+                                                <th><b>No. of Employees</b></th>
+                                                <th><b>Contact Person</b></th>
+                                                <th><b>Contact Person Number</b></th>
+                                                <th><b>Contact Person Email</b></th>
+                                                <th><b>Secondary Contact Person</b></th>
+                                                <th><b>Secondary Contact Person Number</b></th>
+                                                <th><b>Secondary Contact Person Email</b></th>
+                                                <th><b>Member Certificate</b></th>
+                                                <th><b>Trade License</b></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for data in participant_list %}
+                                                <tr>
+                                                    <td><time>{{ data.created|date:"SHORT_DATETIME_FORMAT" }}</time></td>
+                                                    <td>{{ data.organization_name }}</td>
+                                                    <td>{{ data.is_first_time }}</td>
+                                                    <td>{{ data.category_name }}</td>
+                                                    <td>{{ data.organization_type }}</td>
+                                                    <td>{{ data.organization_location }}</td>
+                                                    <td>{{ data.organization_number_of_employees }}</td>
+                                                    <td>{{ data.contact_person_name }}</td>
+                                                    <td>{{ data.contact_person_number }}</td>
+                                                    <td>{{ data.contact_person_email }}</td>
+                                                    <td>{{ data.secondary_contact_person_name }}</td>
+                                                    <td>{{ data.secondary_contact_person_number }}</td>
+                                                    <td>{{ data.secondary_contact_person_email }}</td>
+                                                    {% if data.membership_certificate %}
+                                                        <td>
+                                                            <a href="{{ data.membership_certificate.url }}" target="_blank" rel="noopener noreferrer">
+                                                                View File
+                                                            </a></td>
+                                                    {% else %}
+                                                        <td>None</td>
+                                                    {% endif %}
+                                                    {% if data.trade_license  %}
+                                                        <td>
+                                                            <a href="{{ data.trade_license.url }}" target="_blank" rel="noopener noreferrer">
+                                                                View File
+                                                            </a>
+                                                        </td>
+                                                    {% else %}
+                                                        <td>None</td>
+                                                    {% endif %}
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        {% if is_paginated %}
+                                            <div class="pagination">
+                                                {% if page_obj.has_previous %}
+                                                    <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                                                {% else %}
+                                                    <a class="disabled"><span>&laquo;</span></a>
+                                                {% endif %}
+                                                {% for i in paginator.page_range %}
+                                                    {% if page_obj.number == i %}
+                                                        <a class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></a>
+                                                    {% else %}
+                                                        <a href="?page={{ i }}">{{ i }}</a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% if page_obj.has_next %}
+                                                    <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                                                {% else %}
+                                                    <a class="disabled"><span>&raquo;</span></a>
+                                                {% endif %}
+                                            </div>
+                                        {% endif %}
+                                        <defs>
+                                            <linearGradient id="grad" gradientTransform="rotate(90)">
+                                                <stop offset="0" stop-color="#7a5449" />
+                                                <stop offset="1" stop-color="rgba(255,255,255,0)" />
+                                            </linearGradient>
+                                        </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- /Row -->
+        </div>
+        <!-- /Container -->
+
+        <!-- Footer -->
+        {% include 'common/footer.html' %}
+        <!-- /Footer -->
+    </div>
+
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+        .fa-calendar:hover {
+            color: rgb(4, 112, 4) !important;
+        }
+    </style>
+    <script src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'js/dataTables-data.js' %}"></script>
+
+    <script src="{% static 'vendors/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-dt/js/dataTables.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons/js/buttons.flash.min.js' %}"></script>
+    <script src="{% static 'vendors/jszip/dist/jszip.min.js' %}"></script>
+    <script src="{% static 'vendors/pdfmake/build/pdfmake.min.js' %}"></script>
+    <script src="{% static 'vendors/pdfmake/build/vfs_fonts.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons/js/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons/js/buttons.print.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-responsive/js/dataTables.responsive.min.js' %}"></script>
+
+    <script>
+        // var started="date";
+        // var ended="var";
+        var split;
+        $(function() {
+            $("#searchInput").on("keyup",function(e) {
+                if (e.key === 'Enter' || e.keyCode === 13) {
+                    const value = $(this).val()
+                    const url = $("#searchInput").attr("data-url");
+                    document.location.href = '?search=' + value
+                }
+            });
+        });
+        // loop through the table
+        function htmlToCSV(html, filename) {
+            var data = [];
+            var rows = document.querySelectorAll("table tr");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+
+                for (var j = 0; j < cols.length; j++) {
+                    row.push(cols[j].innerText);
+                }
+
+                data.push(row.join(","));
+            }
+
+            downloadCSVFile(data.join("\n"), filename);
+        }
+        //  prepare and download csv file 
+        function downloadCSVFile(csv, filename) {
+            var csv_file, download_link;
+
+            csv_file = new Blob([csv], {type: "text/csv"});
+
+            download_link = document.createElement("a");
+
+            download_link.download = filename;
+
+            download_link.href = window.URL.createObjectURL(csv_file);
+
+            download_link.style.display = "none";
+
+            document.body.appendChild(download_link);
+
+            download_link.click();
+        }
+
+        $(document).ready( function () {
+            var url=window.location.href
+            split = url.split('?')[1]
+            $('#datable_1').DataTable();
+        } );
+        window.addEventListener("load", function (event) {
+            let drp = new DateRangePicker('daterange',
+                {
+                    //startDate: '2000-01-01',
+                    //endDate: '2000-01-03',
+                    //minDate: '2021-07-15 15:00',
+                    //maxDate: '2021-08-16 15:00',
+                    //maxSpan: { "days": 9 },
+                    //showDropdowns: true,
+                    minYear: 2020,
+                    maxYear: 2030,
+                    //showWeekNumbers: true,
+                    //showISOWeekNumbers: true,
+                    // timePicker: true,
+                    //timePickerIncrement: 10,
+                    //timePicker24Hour: true,
+                    //timePickerSeconds: true,
+                    showCustomRangeLabel: false,
+                    alwaysShowCalendars: true,
+                    //opens: 'center',
+                    //drops: 'up',
+                    //singleDatePicker: true,
+                    //autoApply: true,
+                    //linkedCalendars: false,
+                    //isInvalidDate: function(m){
+                    //    return m.weekday() == 3;
+                    //},
+                    //isCustomDate: function(m){
+                    //    return "weekday-" + m.weekday();
+                    //},
+                    autoUpdateInput: false,
+                    ranges: {
+                        'Today': [moment().startOf('day'), moment().endOf('day')],
+                        'Yesterday': [moment().subtract(1, 'days').startOf('day'), moment().subtract(1, 'days').endOf('day')],
+                        'Last 7 Days': [moment().subtract(6, 'days').startOf('day'), moment().endOf('day')],
+                        'This Month': [moment().startOf('month').startOf('day'), moment().endOf('month').endOf('day')],
+                    },
+                    locale: {
+                        format: "YYYY-MM-DD",
+                    }
+                },
+                function (start, end) {
+                    // alert(start.format('YYYY-MM-DD') + " - " + end.format('YYYY-MM-DD'));
+                    started = start.format('YYYY-MM-DD');
+                    ended = end.format('YYYY-MM-DD');
+                    const url = $("#daterange").attr("data-url");
+                    document.location.href = url + '?date_after=' + started + '&date_before=' + ended + '&'
+
+                })
+            //drp.setStartDate('2014/03/01');
+            //drp.setEndDate('2014/03/03');
+            window.addEventListener('apply.daterangepicker', function (ev) {
+                console.log(ev.detail.startDate.format('YYYY-MM-DD'));
+                console.log(ev.detail.endDate.format('YYYY-MM-DD'));
+                this.started = ev.detail.startDate.format('YYYY-MM-DD');
+                console.log(this.started);
+            });
+
+
+            // Call the main function on button click
+            document.getElementById("export").addEventListener("click", function () {
+                // var html = document.querySelector("table").outerHTML;
+                // htmlToCSV(html, "GreenPOS.csv");
+                const url = $("#export").attr("url");
+                if(split==undefined){
+                    document.location.href = url;
+                }
+                else{
+                    document.location.href = url+'?'+split;
+                }
+
+            });
+        });
+    </script>
+{% endblock %}

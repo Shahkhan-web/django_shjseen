@@ -5,7 +5,7 @@
 Django==3.2.13
 django-environ==0.8.1
 argon2-cffi==21.3.0  # password
-Pillow==9.1.1
+Pillow
 
 # Rest Framework
 # --------------------------------------------------------------
@@ -14,5 +14,5 @@ django-sql-utils==0.6.1
 
 # Database
 # --------------------------------------------------------------
-mysqlclient==2.1.0
+mysqlclient
 pymysql==1.0.2

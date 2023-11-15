@@ -139,6 +139,15 @@
             margin-bottom: 2rem;
         }
 
+
+        .active {
+            color: #fae45e !important;
+        }
+
+        .menu-item a div:hover {
+            color: #fae45e !important;
+        }
+
         .pending-tm {
             padding: 1rem;
             color: #000;
@@ -303,6 +312,10 @@
             }
         }
 
+        .portfolio-image {
+            border-radius: 20px !important;
+        }
+
         .section-1 {
             background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(/staticfiles/assets/images/call-to-action-bg.jpg) fixed center center;
             background-size: cover;
@@ -409,8 +422,13 @@
         }
 
 
+        .links a:hover {
+            color: #fae45e !important;
+        }
+
+
         .banner-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/media_b.jpeg') fixed bottom;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/banners/banners/SHJ01.jpg') bottom;
             background-size: cover;
             padding: 20vh 0;
             height: 500px;
@@ -464,394 +482,396 @@
                                     </a>
                                 </li>
                                 <li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'media' %}"">
-										<div>Media</div>
-									</a>
-								</li>
-								<li class=" menu-item"><a class="menu-link ls-1 text-uppercase" href="contact">
-                                            <div>Contact Us</div>
-                                        </a>
-                                </li>
-                            </ul>
-
-                        </nav><!-- #primary-menu end -->
-
-                        <!-- Primary Navigation
-						============================================= -->
-                        <nav class="primary-menu">
-
-                            <ul class="menu-container header-button">
-                                <li class="menu-item">
-                                    <a href="#section-tickets"
-                                        class="button ls-1 text-uppercase fw-semibold button-pr m-0"
-                                        data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
-                                </li>
-                            </ul>
-
-                        </nav><!-- #primary-menu end -->
-
+										<div class=" active">Media
                     </div>
+                    </a>
+                    </li>
+                    <li class=" menu-item"><a class="menu-link ls-1 text-uppercase" href="contact">
+                            <div>Contact Us</div>
+                        </a>
+                    </li>
+                    </ul>
+
+                    </nav><!-- #primary-menu end -->
+
+                    <!-- Primary Navigation
+						============================================= -->
+                    <nav class="primary-menu">
+
+                        <ul class="menu-container header-button">
+                            <li class="menu-item">
+                                <a href="#section-tickets" class="button ls-1 text-uppercase fw-semibold button-pr m-0"
+                                    data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
+                            </li>
+                        </ul>
+
+                    </nav><!-- #primary-menu end -->
+
                 </div>
             </div>
-            <div class="header-wrap-clone"></div>
-        </header><!-- #header end -->
-        <div class="row" style="background-color: #ebebeb !important;">
-            <div class="banner-section">
-                <div style="text-align: center; margin: 6%;">
-                    <h2>Gallery - Masonry</h2>
-                    <span style="color: #fff;">Showcase of Our Awesome Works</span>
-                </div>
+    </div>
+    <div class="header-wrap-clone"></div>
+    </header><!-- #header end -->
+    <div class="row" style="background-color: #ebebeb !important;">
+        <div class="banner-section">
+            <div style="text-align: center; margin: 6%;">
+                <h2>Media</h2>
+                <!-- <span style="color: #fff;">Showcase of Our Awesome Works</span> -->
             </div>
         </div>
+    </div>
 
-        <!-- Content
+    <!-- Content
 		============================================= -->
 
-        <section class="container-fluid" style="width: auto !important; margin-bottom: 5vh !important;">
-            <div class="container-fluid" style="width: auto !important; margin: 0px 5vw;margin-top: -5vh;">
+    <section class="container-fluid" style="width: auto !important; margin-bottom: 5vh !important;">
+        <div class="container-fluid" style="width: auto !important; margin: 0px 5vw;margin-top: -5vh;">
 
-                <div class="grid-filter-wrap">
+            <div class="grid-filter-wrap">
 
-                    <!-- Portfolio Filter
+                <!-- Portfolio Filter
 						============================================= -->
-                    <ul class="grid-filter" data-container="#portfolio">
-                        <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
-                        <li><a href="#" data-filter=".pf-1">Ceremony 2016</a></li>
-                        <li><a href="#" data-filter=".pf-2">Ceremony 2017</a></li>
-                        <li><a href="#" data-filter=".pf-2">Ceremony 2018</a></li>
-                        <li><a href="#" data-filter=".pf-2">Ceremony 2019</a></li>
-                        <li><a href="#" data-filter=".pf-2">Ceremony 2020</a></li>
-                        <li><a href="#" data-filter=".pf-2">Ceremony 2021</a></li>
-                    </ul>
-                    <!-- .grid-filter end -->
+                <ul class="grid-filter" data-container="#portfolio">
+                    <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
+                    <li><a href="#" data-filter=".pf-1">Ceremony 2016</a></li>
+                    <li><a href="#" data-filter=".pf-2">Ceremony 2017</a></li>
+                    <li><a href="#" data-filter=".pf-2">Ceremony 2018</a></li>
+                    <li><a href="#" data-filter=".pf-2">Ceremony 2019</a></li>
+                    <li><a href="#" data-filter=".pf-2">Ceremony 2020</a></li>
+                    <li><a href="#" data-filter=".pf-2">Ceremony 2021</a></li>
+                </ul>
+                <!-- .grid-filter end -->
 
-                    <div class="grid-shuffle rounded" data-container="#portfolio">
-                        <i class="uil uil-sync"></i>
-                    </div>
-
+                <div class="grid-shuffle rounded" data-container="#portfolio">
+                    <i class="uil uil-sync"></i>
                 </div>
 
-                <!-- Portfolio Items
-					============================================= -->
-                <div id="portfolio" class="portfolio portfolio-reveal row grid-container gutter-20"
-                    data-layout="fitRows">
-
-                    <!-- Portfolio Item: Start -->
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-media pf-1">
-                        <!-- Grid Inner: Start -->
-                        <div class="grid-inner">
-                            <!-- Image: Start -->
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/1.jpg" alt="Open Imagination">
-                                </a>
-                                <!-- Overlay: Start -->
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/1.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                                <!-- Overlay: End -->
-                            </div>
-                            <!-- Image: End -->
-
-                            <!-- Description: Start -->
-                        </div>
-                        <!-- Grid Inner: End -->
-                    </article>
-                    <!-- Portfolio Item: End -->
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/2.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/2.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/3.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/3.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/4.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/4.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/5.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/5.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/6.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/6.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/7.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/7.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/8.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/8.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
-                        <div class="grid-inner">
-                            <div class="portfolio-image">
-                                <a>
-                                    <img src="/staticfiles/assets/media/9.jpg" alt="meida">
-                                </a>
-                                <div class="bg-overlay">
-                                    <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item">
-                                        <a href="/staticfiles/assets/media/9.jpg"
-                                            class="overlay-trigger-icon bg-light text-dark"
-                                            data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
-                                            data-hover-speed="350" data-hover-parent=".portfolio-item"
-                                            data-lightbox="image" title="Image"><i class="uil uil-plus"></i></a>
-                                    </div>
-                                    <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
-                                        data-hover-parent=".portfolio-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-
-                </div><!-- #portfolio end -->
-
             </div>
-        </section>
-        <!-- Footer
-		============================================= -->
-        <footer id="footer" class="dark bg-dark">
-            <div class="container">
 
-                <!-- Footer Widgets
-				============================================= -->
-                <div class="footer-widgets-wrap py-0">
-                    <div class="row align-items-center justify-content-center g-4 mb-5 mb-lg-0">
-                        <div class="col-12">
-                            <div class="grid-inner px-4 py-6 text-center mx-auto" style="max-width: 54rem;">
-                                <h3 class="display-5 mt-3 mb-5" style="font-size: xx-large;">
-                                    Have you made any great achievements in your business?
-                                    <br>
-                                    We are always here to support.
-                                </h3>
-                                <a href="participate" class="button button-pr button-xlarge  mx-0">Register Now</a>
+            <!-- Portfolio Items
+					============================================= -->
+            <div id="portfolio" class="portfolio portfolio-reveal row grid-container gutter-20" data-layout="fitRows">
+
+                <!-- Portfolio Item: Start -->
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-media pf-1">
+                    <!-- Grid Inner: Start -->
+                    <div class="grid-inner">
+                        <!-- Image: Start -->
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/1.jpg" alt="Open Imagination">
+                            </a>
+                            <!-- Overlay: Start -->
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/1.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                            <!-- Overlay: End -->
+                        </div>
+                        <!-- Image: End -->
+
+                        <!-- Description: Start -->
+                    </div>
+                    <!-- Grid Inner: End -->
+                </article>
+                <!-- Portfolio Item: End -->
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/2.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/2.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
                             </div>
                         </div>
+                    </div>
+                </article>
 
-                        <div class="col-lg-4 text-lg-start" data-class="down-lg:order-1">
-                            <a href="{% url 'landing_page' %}">
-                                <img srcset="/staticfiles/assets/images/logos/logo_white.png"
-                                    src="/staticfiles/assets/images/logos/logo_white.png" alt="Shjseen Logo Footer"
-                                    style="width: 70% !important;margin-bottom: 20px;">
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/3.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/3.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/4.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/4.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-1 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/5.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/5.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/6.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/6.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/7.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/7.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/8.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/8.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="portfolio-item col-lg-4 col-md-4 col-sm-6 col-12 pf-2 ">
+                    <div class="grid-inner">
+                        <div class="portfolio-image">
+                            <a>
+                                <img src="/staticfiles/assets/media/9.jpg" alt="meida">
+                            </a>
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item">
+                                    <a href="/staticfiles/assets/media/9.jpg"
+                                        class="overlay-trigger-icon bg-light text-dark"
+                                        data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall"
+                                        data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image"
+                                        title="Image"><i class="uil uil-plus"></i></a>
+                                </div>
+                                <div class="bg-overlay-bg dark" data-hover-animate="fadeIn"
+                                    data-hover-parent=".portfolio-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div><!-- #portfolio end -->
+
+        </div>
+    </section>
+    <!-- Footer
+		============================================= -->
+    <footer id="footer" class="dark bg-dark">
+        <div class="container">
+
+            <!-- Footer Widgets
+            ============================================= -->
+            <div class="footer-widgets-wrap py-0">
+                <div class="row align-items-center justify-content-center g-4 mb-5 mb-lg-0">
+                    <div class="col-12">
+                        <div class="grid-inner px-4 py-6 text-center mx-auto" style="max-width: 54rem;">
+                            <h3 class="display-5 mt-3 mb-5" style="font-size: xx-large;">
+                                Have you made any great achievements in your business?
+                                <br>
+                                We are always here to support.
+                            </h3>
+                            <a href="participate"
+                                class="button button-xlarge button-pr rounded-pill mx-0 button-them">Register
+                                Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 text-lg-start" data-class="down-lg:order-1">
+                        <a href="{% url 'landing_page' %}">
+                            <img srcset="/staticfiles/assets/images/logos/logo_white.png"
+                                src="/staticfiles/assets/images/logos/logo_white.png" alt="Sjseen Logo Footer"
+                                style="width: 70% !important;margin-bottom: 20px;">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
+                        <div class="d-inline-flex gap-5 links">
+                            <a href="{% url 'aboutUs' %}">About</a>
+                            <a href="{% url 'award' %}">Award Category</a>
+
+                            <a href="{% url 'media' %}">Media</a>
+                            <a href="{% url 'contact' %}">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 text-lg-end" data-class="down-lg:order-3">
+                        <div class="d-inline-flex justify-content-center">
+                            <a href="https://www.facebook.com/shjSEEN" style="visibility: hidden;"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                title="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="
+                            https://www.facebook.com/ShjSEEN"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
+                                title="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://twitter.com/shjSEEN"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-twitter"
+                                title="Twitter">
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/shjseen"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-instagram"
+                                title="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/company/shjseen/"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-linkedin"
+                                title="Twitter">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCNijiN0k7q3rjPyuaffUIug"
+                                class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-youtube"
+                                title="Twitter">
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-youtube"></i>
                             </a>
                         </div>
-                        <div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
-                            <div class="d-inline-flex gap-5">
-                                <a href="aboutUs">About</a>
-                                <a href="{% url 'media' %}">media</a>
-                                <a href="{% url 'award' %}">Award Category</a>
-                                <a href="contact">Contact Us</a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 text-lg-end" data-class="down-lg:order-3">
-                            <div class="d-inline-flex justify-content-center">
-                                <a href="https://www.facebook.com/shjSEEN" style="visibility: hidden;"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
-                                    title="Facebook">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.facebook.com/shjSEEN"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-facebook"
-                                    title="Facebook">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-
-                                <a href="https://twitter.com/shjSEEN"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-twitter"
-                                    title="Twitter">
-                                    <i class="fa-brands fa-twitter"></i>
-                                    <i class="fa-brands fa-twitter"></i>
-                                </a>
-
-                                <a href="https://www.instagram.com/shjseen"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-instagram"
-                                    title="Instagram">
-                                    <i class="fa-brands fa-instagram"></i>
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-
-                                <a href="https://www.linkedin.com/company/shjseen/"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-linkedin"
-                                    title="Twitter">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-
-                                <a href="https://www.youtube.com/channel/UCNijiN0k7q3rjPyuaffUIug"
-                                    class="social-icon si-small text-white rounded-circle bg-opacity-10 h-bg-youtube"
-                                    title="Twitter">
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                </div><!-- .footer-widgets-wrap end -->
+                </div>
+            </div><!-- .footer-widgets-wrap end -->
 
-                <!-- Copyrights
-				============================================= -->
-                <div id="copyrights" class="bg-transparent border-top border-default">
-                    <div class="row g-3">
-                        <div class="col-lg-6  text-lg-start">
-                            Copyrights &copy; 2023 All Rights Reserved by Shjseen.
-                        </div>
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights" class="bg-transparent border-top border-default">
+                <div class="row g-3">
+                    <div class="col-lg-6  text-lg-start">
+                        Copyrights &copy; 2023 All Rights Reserved to Shjseen.
+                    </div>
 
-                        <div class="col-lg-6 text-lg-end">
-                            <div class="copyright-links mt-0">
-                                <a href="{% url 'terms' %}">Terms &amp; Conditions</a>
-                            </div>
+                    <div class="col-lg-6 text-lg-end">
+                        <div class="copyright-links mt-0">
+                            <a href="{% url 'terms' %}">Terms &amp; Conditions</a>
                         </div>
                     </div>
                 </div>
-                <!-- #copyrights end -->
+            </div><!-- #copyrights end -->
 
-            </div>
-        </footer><!-- #footer end -->
+        </div>
+    </footer><!-- #footer end -->
 
     </div><!-- #wrapper end -->
 

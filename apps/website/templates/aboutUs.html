@@ -64,9 +64,15 @@
 			list-style-type: disc;
 		}
 
+
+		.links a:hover {
+			color: #fae45e !important;
+		}
+
 		.gradient-bg::before {
 			content: '';
 			position: absolute;
+			border-radius: 20px;
 			top: -5px;
 			left: 8px;
 			width: 99%;
@@ -75,6 +81,28 @@
 			background: -o-linear-gradient(280deg, var(--cnvs-color1) 12.08%, var(--cnvs-color2) 53.53%, var(--cnvs-color3) 95.62%);
 			background: linear-gradient(280deg, var(--cnvs-color1) 12.08%, var(--cnvs-color2) 53.53%, var(--cnvs-color3) 95.62%);
 		}
+
+		.gradient-bg-bl::before {
+			content: '';
+			position: absolute;
+			border-radius: 20px;
+			top: -48%;
+			left: 10px;
+			width: 95%;
+			height: 145%;
+			background: #444 !important;
+		}
+
+		.gradient-bg-chair::before {
+			content: '';
+			position: absolute;
+			border-radius: 20px;
+			top: -3px;
+			left: 8px;
+			width: 99%;
+			height: 99%;
+		}
+
 
 		.b-r {
 			border-radius: 20px;
@@ -153,6 +181,15 @@
 			height: 100vh;
 		}
 
+
+		.active {
+			color: #fae45e !important;
+		}
+
+		.menu-item a div:hover {
+			color: #fae45e !important;
+		}
+
 		h2 {
 			font-size: 2.25rem;
 			font-family: var(--font-title);
@@ -191,6 +228,14 @@
 			margin-bottom: 2rem;
 		}
 
+		.team-image img {
+			border-radius: 20px !important;
+		}
+
+		.team-image:after {
+			border-radius: 20px !important;
+		}
+
 		.pending-tm {
 			padding: 1rem;
 			color: #000;
@@ -220,6 +265,40 @@
 					hsla(0, 0%, 0%, 0.3) 10%,
 					hsl(0, 0%, 0%) 100%);
 		}
+
+		.button-wr {
+			color: #444 !important;
+			border-radius: 20px;
+			transition: .5s ease-in-out all;
+			background-color: #fff !important;
+			border: 2px solid #fff;
+		}
+
+		.button-wr:hover {
+			color: #fff !important;
+			border-radius: 20px;
+			background-color: #444 !important;
+			border: 2px solid #444;
+		}
+
+		.button-sr {
+			color: #444 !important;
+			border-radius: 20px;
+			transition: .5s ease-in-out all;
+			background-color: #fae45e !important;
+
+			border: 2px solid #fae45e;
+		}
+
+
+		.button-sr:hover {
+			color: #fff !important;
+			border-radius: 20px;
+			border: 2px solid #444;
+			scale: 1;
+			background-color: transparent !important;
+		}
+
 
 		.card__content--container {
 			--flow-space: 1.25rem;
@@ -287,6 +366,21 @@
 			color: #fff !important;
 			border-radius: 20px;
 			background-color: #444 !important;
+			border: 2px solid #444;
+		}
+
+		.button-br {
+			color: #fff !important;
+			border-radius: 20px;
+			transition: .5s ease-in-out all;
+			background-color: #444 !important;
+			border: 2px solid #444;
+		}
+
+		.button-br:hover {
+			color: #444 !important;
+			border-radius: 20px;
+			background-color: transparent !important;
 			border: 2px solid #444;
 		}
 
@@ -399,6 +493,10 @@
 			padding-right: 1rem !important;
 		}
 
+		.b-r-2 {
+			border-radius: 20px !important;
+		}
+
 		.menu-link {
 			color: #000 !important;
 		}
@@ -474,7 +572,7 @@
 		}
 
 		.banner-section {
-			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/about_us.jpeg') fixed center;
+			background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/banners/banners/SHJ03.jpg') bottom;
 			background-size: cover;
 			padding: 20vh 0;
 			height: 500px;
@@ -613,7 +711,7 @@
 							<ul class="menu-container one-page-menu" data-easing="easeInOutExpo" data-speed="1250"
 								data-offset="160">
 								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="aboutUs">
-										<div>About Us</div>
+										<div class="active">About Us</div>
 									</a>
 								</li>
 								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}">
@@ -670,7 +768,7 @@
 				<div class="col-md-8">
 					<h2 class="display-4 text-dark fw-semibold ls--2">Welcome to
 						<br>
-						<span>Sharjah Excelence award</span>.
+						<span>Sharjah Excellence Award</span>
 					</h2>
 					<p class="text-dark mb-0">
 						We envision benefiting Sharjah's economy in all sectors by promoting sustainable economic growth
@@ -690,25 +788,38 @@
 			<div class="row mt-5 mb-5 gutter-lg-50 align-items-center">
 				<div class="col-lg-6 p-lg-5">
 					<div class="heading-block border-bottom-0" style="margin-bottom: 100px;">
-						<div class="before-heading" style="background-color: transparent !important;">Know More</div>
-						<h2 class="text-transform-none fw-semibold mb-4">Our mission</h2>
+						<!-- <div class="before-heading" style="background-color: transparent !important;">Know More</div> -->
+						<h2 class="text-transform-none fw-semibold mb-4">Our Mission</h2>
 
-						<p class="text-muted mt-3"> Strengthening culture, organizational excellence and innovation in
+						<p class="text-muted mt-3">Strengthening culture, organizational excellence and innovation in
 							Sharjah by utilizing global best practices of promoting and celebrating all business sectors
-							and creating a positive competitive environment in the emirate.</p>
+							and creating a positive competitive environment in the emirate
+							.</p>
 						<h4 class="about_heading text-capitalize font-weight-bold mt-4">
-							Objectives:
+							Our Objectives:
 						</h4>
 						<ul class="ul-cus" style="margin-left: 25px;margin-top: 20px;">
-							<li>
-								Promoting a culture of quality, excellence and innovation in all institutions in the
-								business sector in the emirate and beyond
+							<li>Promoting a culture of quality, excellence and innovation in all institutions in the
+								business sector in the
+								emirate and beyond
 							</li>
 							<li>
 								Supporting initiatives and practices that grow organizational excellence in Sharjah
 							</li>
 							<li>Improving the results and outputs of the economic projects in Sharjah</li>
 						</ul>
+						<h4 class="about_heading text-capitalize font-weight-bold mt-4">
+							Our Values:
+						</h4>
+						<ul class="ul-cus" style="margin-left: 25px;margin-top: 20px;">
+							<li>Sustainable growth
+							</li>
+							<li>
+								Having the desire to do business
+							</li>
+							<li>Motivation with knowledge</li>
+						</ul>
+
 
 
 					</div>
@@ -716,7 +827,7 @@
 				<div class="col-lg-6 p-lg-5">
 
 					<div class="gradient-bg">
-						<img src="/staticfiles/assets/images/about_us.jpeg" alt="Image">
+						<img class=" b-r-2" src="/staticfiles/assets/images/about_us.jpeg" alt="Image">
 					</div>
 				</div>
 			</div>
@@ -728,12 +839,15 @@
 			<div class="container-fluid p-2" style="width: auto !important; margin: 10vh 0px 5vw !important;">
 				<div class="row">
 					<div class="image col-4" style="padding-left: 10vw;">
-						<img src="/staticfiles/assets/images/shekh.png" alt="chairman"
-							style="width: 40vh;margin-top: -120px;">
+						<div class="gradient-bg-bl gradient-bg">
+							<img class="b-r-2" src="/staticfiles/assets/images/shekh.png" alt="chairman"
+								style="width: 40vh;margin-top: -120px;">
+						</div>
+
 					</div>
 					<div class="text col-8" style="padding-left: 7vw; margin-top: 5vh; margin-bottom: 5vh;">
 						<h4 style="width: 90% !important;">
-							<q id="additionalText" style="font-weight: 550;">
+							<q id="additionalText" style="font-weight: 500;font-size:x-large;">
 								The Successful Management Of Work Adopts A Scientific Methodology Of Management And
 								Rules Through Planning, Following-Up, Assessment, Upgrading And The Provision Of
 								Qualified Cadres To Be Invested In Accomplishing The Work Successfully And With
@@ -782,9 +896,8 @@
 						<p class=" mt-3">
 							Sultan bin Mohammed bin Sultan Al Qassimi
 						</p>
-						<p id="readMoreBtn" class="button button-them mt-4 text-white" style="color: #332 !important;">
-							Read
-							More...
+						<p id="readMoreBtn" class="button button-br mt-4">
+							Read More
 						</p>
 
 					</div>
@@ -817,8 +930,10 @@
 
 					</div>
 					<div class="image col-4" style="padding-left: 10vw; margin-top: 50px;">
-						<img src="/staticfiles/assets/images/members/010.jpg" alt="chairman"
-							style="width: 40vh;margin-top: 5px;">
+						<div class="gradient-bg-chair gradient-bg">
+							<img src="/staticfiles/assets/images/members/010.jpg" class=" b-r-2" alt="chairman"
+								style="width: 40vh;margin-top: 5px;">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -864,7 +979,7 @@
 						</div>
 						<div class="team-desc">
 							<div class="team-title">
-								<h4 class="gradient-text">HE Najla Al Midfa</h4><span>CEO - Sheraa</span>
+								<h4 class="gradient-text">H.E Najla Al Midfa</h4><span>CEO - Sheraa</span>
 							</div>
 						</div>
 					</a>
@@ -887,7 +1002,7 @@
 						</div>
 						<div class="team-desc">
 							<div class="team-title">
-								<h4 class="gradient-text">H.E Halima Humaid Ali Al Owais</h4><span>SCCI Board Member
+								<h4 class="gradient-text">H.E Halima Humaid <br> Ali Al Owais</h4><span>SCCI Board Member
 								</span>
 							</div>
 						</div>
@@ -929,7 +1044,7 @@
 						</div>
 					</a>
 
-				 
+
 					<a href="#" class="team col-lg-3 col-sm-6 mb-5">
 						<div class="team-image">
 							<img src="/staticfiles/assets/images/members/002.jpg" alt="John Doe">
@@ -942,7 +1057,7 @@
 						</div>
 					</a>
 
-					
+
 
 				</div>
 			</div>
@@ -959,8 +1074,7 @@
 						Sharjah
 						Excellence Award Cycle
 						2023</h3>
-					<a href="participate" class="button ls-1  fw-semibold  button-them m-0"
-						style="background-color: white !important; color: black;">Get
+					<a href="participate" class="button ls-1  fw-semibold  button-wr m-0">Get
 						Started</a>
 					<div style="height: 100px;"></div>
 				</div>
@@ -983,8 +1097,8 @@
 									We are always here to support.
 								</h3>
 								<a href="participate"
-									class="button button-xlarge h-text-white text-white rounded-pill mx-0 button-them"
-									style="color: #444 !important;">Register Now</a>
+									class="button button-xlarge button-pr rounded-pill mx-0 button-them">Register
+									Now</a>
 							</div>
 						</div>
 
@@ -996,7 +1110,7 @@
 							</a>
 						</div>
 						<div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
-							<div class="d-inline-flex gap-5">
+							<div class="d-inline-flex gap-5 links">
 								<a href="aboutUs">About</a>
 								<a href="{% url 'award' %}">Award Category</a>
 								<a href="{% url 'media' %}">Media</a>
@@ -1057,7 +1171,7 @@
 				<div id="copyrights" class="bg-transparent border-top border-default">
 					<div class="row g-3">
 						<div class="col-lg-6  text-lg-start">
-							Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+							Copyrights &copy; 2023 All Rights Reserved to Shjseen.
 						</div>
 
 						<div class="col-lg-6 text-lg-end">

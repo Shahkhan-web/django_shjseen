@@ -326,11 +326,34 @@
 			height: 300px;
 		}
 
+		.active {
+			color: #fae45e !important;
+		}
+
+		.menu-item a div:hover {
+			color: #fae45e !important;
+		}
+
+
 		.header-chir {
 			padding-bottom: 2rem;
 			text-align: center;
 		}
 
+		.button-wr {
+            color: #444 !important;
+            border-radius: 20px;
+            transition: .5s ease-in-out all;
+            background-color: #fff !important;
+            border: 2px solid #fff;
+        }
+
+        .button-wr:hover {
+            color: #fff !important;
+            border-radius: 20px;
+            background-color: #444 !important;
+            border: 2px solid #444;
+        }
 		.team-desc {
 			position: absolute;
 			left: 0;
@@ -414,7 +437,7 @@
 		}
 
 		.banner-section {
-			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/award_b.jpeg') fixed bottom;
+			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/banners/banners/AWARD.jpg') center;
 			background-size: cover;
 			padding: 20vh 0;
 			height: 500px;
@@ -423,18 +446,22 @@
 			bottom: 3rem;
 		}
 
+
+        .links a:hover{
+            color: #fae45e !important;
+        }
+        
 		.button-pr {
 			color: #444 !important;
-			border-radius: 10px;
+			border-radius: 20px;
 			transition: .5s ease-in-out all;
 			background-color: #fae45e !important;
 			border: 2px solid #fae45e;
 		}
 
-
 		.button-pr:hover {
 			color: #fff !important;
-			border-radius: 5px;
+			border-radius: 20px;
 			background-color: #444 !important;
 			border: 2px solid #444;
 		}
@@ -486,7 +513,7 @@
 								</li>
 								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="#"
 										data-href="#section-speakers">
-										<div>Award Category</div>
+										<div class="active">Award Category</div>
 									</a>
 								</li>
 								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'media' %}"">
@@ -513,11 +540,10 @@
 						<!-- Primary Navigation
 						============================================= -->
 						<nav class="primary-menu">
-
 							<ul class="menu-container header-button">
 								<li class="menu-item">
 									<a href="#section-tickets"
-										class="button ls-1 text-uppercase fw-semibold button-pr button-effect m-0"
+										class="button ls-1 text-uppercase fw-semibold button-pr m-0"
 										data-class="down-lg:px-1" data-scrollto="#section-tickets">EN</a>
 								</li>
 							</ul>
@@ -544,23 +570,24 @@
 				============================================= -->
 		<div id="section-location" class="section bg-transparent m-0" style="padding-top:0px !important;">
 
-			<div class="container" style="max-width: 80% !important;">
+			<div class="container" style="max-width: 90% !important;">
 				<div class="mx-auto text-center" style="max-width: 70%;padding-bottom: 40px;">
-					<span class="fw-bold section-reg-text">The Sharjah Excellence Award targets
+					<span class="fw-bold section-reg-text">Sharjah Excellence Award targets <br>
 						The leading businesses and corporates </span>
-					<p class="lead " style="color: #444;">Start your journey by registering.</p>
+					<p class="lead " style="color: #444;">Start your journey by registering with us.</p>
 				</div>
 				<div class="clear"></div>
-				<div class="row align-items-stretch regi-card">
+			    <div class="row align-items-stretch regi-card">
 					<div class="col-12"
 						style="display: flex;justify-content: center;align-items: center;flex-direction: row;flex-wrap: wrap;">
 						<!-- Sharjah Gulf Localization Award -->
 						<div class="snip1519" href="participate">
 							<figcaption>
-								<img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/Localization.jpg"></img>
-								<h2>Sharjah Gulf Localization Award</h2>
+								<img class="ion-ios-rose-outline"
+									src="/staticfiles/cardsImage/Localization.jpg"></img>
+								<h2>Sharjah Gulf <br> Localization Award</h2>
 								<p style="color: #444;font-weight: 500;">A collaboration of FGCCC and Sharjah
-									Chamber, promotes job opportunities for GCC nationals.
+									Chamber of Commerce, promotes job opportunities for GCC nationals. <br>
 								</p>
 								<p href="participate"
 									class="button button-pr p-c  m-0 text-center fw-medium text-transform-none ls-0 fw-normal">
@@ -578,7 +605,7 @@
 							<figcaption>
 								<img class="ion-ios-rose-outline"
 									src="/staticfiles/cardsImage/Gulf_Excellence.jpg"></img>
-								<h2>Sharjah Gulf Excellence Award <br>
+								<h2>Sharjah Gulf <br> Excellence Award <br>
 								</h2>
 								<p style="color: #444;font-weight: 500;">Honors top-performing large and
 									small-medium enterprises across GCC, nominated based on Forbes rankings.</p>
@@ -598,8 +625,9 @@
 						<!-- Sharjah Excellence Award -->
 						<div class="snip1519">
 							<figcaption>
-								<img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/Excellence.jpg"></img>
-								<h2>Sharjah Excellence Award</h2>
+								<img class="ion-ios-rose-outline"
+									src="/staticfiles/cardsImage/Excellence.jpg"></img>
+								<h2>Sharjah Excellence <br> Award</h2>
 								<p style="color: #444;font-weight: 500;">Unites large, small, and medium
 									enterprises for sustainable excellence, fostering performance improvement
 								</p>
@@ -621,9 +649,10 @@
 						<div class="snip1519" href="participate">
 							<figcaption><img class="ion-ios-rose-outline"
 									src="/staticfiles/cardsImage/Entrepreneurs.jpg"></img>
-								<h2>Sharjah Entrepreneurs Award</h2>
+								<h2>Sharjah Entrepreneurs <br> Award</h2>
 								<p style="color: #444;font-weight: 500;">Honors outstanding individuals who have
-									made a significant impact in the UAE business sector.
+									made a significant impact and flourished in the UAE business sector.
+									<br> 
 								</p>
 
 								<p href="participate"
@@ -639,7 +668,8 @@
 
 						<!-- Sharjah Small and Medium Enterprises Award -->
 						<div class="snip1519" href="participate">
-							<figcaption><img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/SME.jpg"></img>
+							<figcaption><img class="ion-ios-rose-outline"
+									src="/staticfiles/cardsImage/SME.jpg"></img>
 								<h2>Sharjah Small and Medium Enterprises Award</h2>
 								<p style="color: #444;font-weight: 500;">Celebrates innovative ventures in
 									Trade, Industrial, and Services sectors, recognizing growth and excellence.
@@ -662,9 +692,9 @@
 						<div class="snip1519" href="participate">
 							<figcaption>
 								<img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/CSR.jpg"></img>
-								<h2>Sharjah Social Responsibility Award</h2>
-								<p style="color: #444;font-weight: 500;">Exclusive to the emirate, applauds
-									organizations championing comprehensive Corporate Social Responsibility,
+								<h2>Sharjah Social <br> Responsibility Award</h2>
+								<p style="color: #444;font-weight: 500;">
+									 A organizations championing comprehensive Corporate Social Responsibility,
 									promoting
 									sustainability and societal contributions.</p>
 
@@ -678,12 +708,13 @@
 								</a>
 							</figcaption>
 						</div>
-						
+
 						<!-- Sharjah Best Security Standards Award -->
 						<div class="snip1519" href="participate">
 							<figcaption>
-								<img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/Security.jpg"></img>
-								<h2> Sharjah Best Security Standards Award</h2>
+								<img class="ion-ios-rose-outline"
+									src="/staticfiles/cardsImage/Security.jpg"></img>
+								<h2> Sharjah Best <br> Security Standards <br> Award</h2>
 								<p style="color: #444;font-weight: 500;">Introduced at the Economic
 									Sustainability Forum, emphasizes implementing safety measures for
 									enterprises.</p>
@@ -696,15 +727,14 @@
 									class="button button-pr m-0 p-c text-center fw-medium text-transform-none ls-0 fw-normal">
 									Download
 								</a>
-
-
 							</figcaption>
 						</div>
 						<!-- Sharjah Entrepreneurs with Disability Award -->
 						<div class="snip1519" href="participate">
 							<figcaption>
-								<img class="ion-ios-rose-outline" src="/staticfiles/cardsImage/Disability.jpg"></img>
-								<h2>Sharjah Entrepreneurs with Disability Award</h2>
+								<img class="ion-ios-rose-outline"
+									src="/staticfiles/cardsImage/Disability.jpg"></img>
+								<h2>Sharjah Entrepreneurs <br> with Disability <br> Award</h2>
 								<p style="color: #444;font-weight: 500;">Fostering confidence and inclusivity in
 									entrepreneurship, aligning with visionary directives. </p>
 
@@ -743,8 +773,8 @@
 									We are always here to support.
 								</h3>
 								<a href="participate"
-									class="button button-xlarge text-white rounded-pill mx-0 button-them"
-									style="color: #444 !important;">Register Now</a>
+									class="button button-xlarge rounded-pill mx-0 button-pr"
+								>Register Now</a>
 							</div>
 						</div>
 
@@ -756,7 +786,7 @@
 							</a>
 						</div>
 						<div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
-							<div class="d-inline-flex gap-5">
+							<div class="d-inline-flex gap-5 links">
 								<a href="aboutUs">About</a>
 								<a href="{% url 'media' %}">media</a>
 								<a href="#">Award Category</a>
@@ -817,7 +847,7 @@
 				<div id="copyrights" class="bg-transparent border-top border-default">
 					<div class="row g-3">
 						<div class="col-lg-6  text-lg-start">
-							Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+							Copyrights &copy; 2023 All Rights Reserved to Shjseen.
 						</div>
 
 						<div class="col-lg-6 text-lg-end">

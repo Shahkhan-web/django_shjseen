@@ -454,6 +454,7 @@ img {
 }
 
 .snip1519 {
+  border-radius: 20px !important;
   cursor: pointer;
   font-family: "Roboto", Arial, sans-serif;
   position: relative;
@@ -464,8 +465,7 @@ img {
   max-width: 390px;
   min-height: 500px;
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 5px;
+  background-color: #ffffff; 
   border-top: 5px solid #fae45e;
   color: #9e9e9e;
   text-align: center;

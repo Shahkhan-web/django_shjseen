@@ -250,6 +250,19 @@
 				bottom: 3rem;
 			}
 
+			.active {
+				color: #fae45e !important;
+			}
+
+			.menu-item a div:hover {
+				color: #fae45e !important;
+			}
+
+			.links a:hover{
+            color: #fae45e !important;
+        }
+        
+
 			.card:hover .card__content,
 			.card:focus-within .card__content {
 				transform: translateY(0);
@@ -398,7 +411,7 @@
 
 		.h-text-color:hover {
 			color: #fff !important;
-	 
+
 		}
 	</style>
 
@@ -717,26 +730,6 @@
 
 							</div>
 						</div>
-
-						<div class="paragraph" style="margin-top: 2rem;">
-							<h2>Mission:</h2>
-							<div class="head-line">
-								<h5>To foster a culture of continuous improvement and excellence in the business
-									community of the emirate of Sharjah, by recognizing and promoting outstanding
-									achievements, innovation, and sustainable growth across all sectors.</h5>
-
-							</div>
-						</div>
-						<div class="paragraph" style="margin-top: 2rem;">
-							<h2>Vision:</h2>
-							<div class="head-line">
-								<h5>To be the beacon of excellence and innovation in the heart of the Middle East,
-									positioning the emirate of Sharjah as a global hub where businesses and investments
-									converge, setting the gold standard for performance excellence, and contributing to
-									the sustainable development of the GCC region.</h5>
-
-							</div>
-						</div>
 						<div class="paragraph" style="margin-top: 2rem;">
 							<h2>Objectives:</h2>
 							<div class="head-line">
@@ -976,7 +969,7 @@
 								style="width: 70% !important;margin-bottom: 20px !important;">
 						</div>
 						<div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
-							<div class="d-inline-flex gap-5">
+							<div class="d-inline-flex gap-5 links">
 								<a href="aboutUs">About</a>
 								<a href="{% url 'award' %}">Award Category</a>
 								<a href="{% url 'media' %}">Media</a>
@@ -1030,7 +1023,7 @@
 				<div id="copyrights" class="bg-transparent border-top border-default">
 					<div class="row g-3">
 						<div class="col-lg-6  text-lg-start">
-							Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+							Copyrights &copy; 2023 All Rights Reserved to Shjseen.
 						</div>
 
 						<div class="col-lg-6 text-lg-end">

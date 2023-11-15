@@ -325,6 +325,15 @@
 			}
 		}
 
+		.active {
+			color: #fae45e !important;
+		}
+
+		.menu-item a div:hover {
+			color: #fae45e !important;
+		}
+
+
 		.section-1 {
 			background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(/staticfiles/assets/images/call-to-action-bg.jpg) fixed center center;
 			background-size: cover;
@@ -426,8 +435,13 @@
 			color: #fff !important;
 		}
 
+
+		.links a:hover {
+			color: #fae45e !important;
+		}
+
 		.banner-section {
-			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/images/contact_b.jpeg') fixed bottom;
+			background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/staticfiles/assets/banners/banners/sdf.jpg') center;
 			background-size: cover;
 			padding: 20vh 0;
 			height: 500px;
@@ -477,8 +491,7 @@
 										<div>About Us</div>
 									</a>
 								</li>
-								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}"
-										>
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="{% url 'award' %}">
 										<div>Award Category</div>
 									</a>
 								</li>
@@ -488,7 +501,7 @@
 								</li>
 								<li class="menu-item"><a class="menu-link ls-1 text-uppercase"
 										href="{% url 'contact' %}">
-										<div>Contact Us</div>
+										<div class="active">Contact Us</div>
 									</a>
 							</ul>
 
@@ -533,7 +546,10 @@
 						<main class="postcontent col-lg-12">
 
 							<h3>Connect with us</h3>
-
+							<p style="color: #444;">Drop us a message to connect with us and know more about one of the best prestigious
+								awards in the region!</p>
+								<hr>
+							<br>
 							<div class="form-widget">
 
 								<div class="form-result"></div>
@@ -639,7 +655,7 @@
 							</a>
 						</div>
 						<div class="col-lg-6 text-center" data-class="down-lg:order-2 down-lg:mt-0">
-							<div class="d-inline-flex gap-5">
+							<div class="d-inline-flex gap-5 links">
 								<a href="aboutUs">About</a>
 								<a href="{% url 'award' %}">Award Category</a>
 
@@ -701,7 +717,7 @@
 				<div id="copyrights" class="bg-transparent border-top border-default">
 					<div class="row g-3">
 						<div class="col-lg-6  text-lg-start">
-							Copyrights &copy; 2023 All Rights Reserved by Shjseen.
+							Copyrights &copy; 2023 All Rights Reserved to Shjseen.
 						</div>
 
 						<div class="col-lg-6 text-lg-end">
